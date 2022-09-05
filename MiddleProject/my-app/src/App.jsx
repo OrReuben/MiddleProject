@@ -6,6 +6,7 @@ import Register from "./Pages/Register/Register";
 import Payment from "./Pages/Payment/Payment";
 import Navbar from "./Components/Navbar/Navbar";
 
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="about" element={<About />} />
       </Routes>
+
     </div>
   );
 }
