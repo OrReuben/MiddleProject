@@ -2,8 +2,7 @@ import { Button } from '@mui/material';
 import * as Yup from "yup"
 import TextField from '@mui/material/TextField';
 import "./Payment.css"
-import { Formik, Field } from 'formik';
-
+import { Formik } from 'formik';
 
 
 const schema= Yup.object().shape({
@@ -39,8 +38,7 @@ function Payment() {
 
     return (
       <div className="Payment">
-    Payment
-   
+
         <div className="h-40 my-4 bg-white rounded-md paymentForm">
         <h1>Payment</h1>
             <Formik initialValues={{name:"", id:"",cardNum:"",date:"",cvc:"",tearms:""}}
@@ -48,14 +46,13 @@ function Payment() {
              validationSchema={schema}
              className="paymentForm"
              >
-
                 {({handleSubmit, handleChange,handleBlur,values,errors,touched})=>(
                 <form action="" onSubmit= {handleSubmit} noValidate>
                 <TextField
                 type="text"
                  name="name"
                 placeholder="Card holder name"
-                onChange={  handleChange}
+                onChange={handleChange}
                 value={values.name}
                 onBlur={handleBlur}
                 />
