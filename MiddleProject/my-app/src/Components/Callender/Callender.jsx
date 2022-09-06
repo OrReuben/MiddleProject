@@ -19,17 +19,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 const events = [
-  {
-    title: "Big Meeting",
-    allDay: true,
-    start: new Date(2022, 8, 1),
-    end: new Date(2022, 8, 3),
-  },
-  {
-    title: "Vacation",
-    start: new Date(2022, 8, 7),
-    end: new Date(2022, 8, 10),
-  },
+
 ];
 
 export default function Calender() {
