@@ -3,51 +3,50 @@ import * as Yup from "yup"
 import TextField from '@mui/material/TextField';
 import "./Payment.css"
 import { Formik, Field } from 'formik';
-import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
+
+
 
 const schema= Yup.object().shape({
   name:Yup.string()
   .required("Plz enter name!!!")
-  .min(3,'enterd vaild name should have 3 charcters'),
+  .min(3,'enterd vaild name should contain 3 charcters')
+  ,
 
   id:Yup.number()
   .required("Plz enter Id!!!")
   .integer("A phone number can't include a decimal point")
   .positive("A phone number can't start with a minus")
-  .min(100000000,'enterd vaild Id should have 9 charcters')
-  .max(999999999,"enterd vaild Id should have 9 charcters not more"),
+  .min(100000000,'enterd vaild Id should contain 9 charcters')
+  .max(999999999,"enterd vaild Id should contain 9 charcters not more"),
+
+  cardNum:Yup.number()
+  .required("Plz enter card number!!!")
+  .min(1000000000000000,'enterd vaild card number should contain 16 charcters')
+  .max(9999999999999999,"enterd vaild card number should contain 16 charcters not more"),
+
+  date:Yup.string()
+  .required("Plz enter date!!!"),
+
+  cvc:Yup.string()
+  .required("Plz enter cvc!!!")
+  .min(3,'enterd vaild CVC should contain 3 charcters')
+  .max(3,"enterd vaild CVC should contain 3 charcters not more"),
+
+  tearms:Yup.boolean().oneOf([true],'agree the tearms')
+  .required("agree the tearms")
 })
 function Payment() {
-  const {
-    meta,
-    getCardNumberProps,
-    getExpiryDateProps,
-    getCVCProps,
-    wrapperProps
-  } = usePaymentInputs();
+
     return (
       <div className="Payment">
     Payment
    
         <div className="h-40 my-4 bg-white rounded-md paymentForm">
         <h1>Payment</h1>
-            <Formik initialValues={{name:"", id:"",cardNum:"",date:"",cardNumber: '',expiryDate: '',cvc: ''}}
+            <Formik initialValues={{name:"", id:"",cardNum:"",date:"",cvc:"",tearms:""}}
              onSubmit={(values)=>alert( JSON.stringify(values))}
              validationSchema={schema}
              className="paymentForm"
-             validate={() => {
-              let errors = {};
-              if (meta.erroredInputs.cardNumber) {
-                errors.cardNumber = meta.erroredInputs.cardNumber;
-              }
-              if (meta.erroredInputs.expiryDate) {
-                errors.expiryDate = meta.erroredInputs.expiryDate;
-              }
-              if (meta.erroredInputs.cvc) {
-                errors.cvc = meta.erroredInputs.cvc;
-              }
-              return errors;
-            }}
              >
 
                 {({handleSubmit, handleChange,handleBlur,values,errors,touched})=>(
@@ -59,7 +58,6 @@ function Payment() {
                 onChange={  handleChange}
                 value={values.name}
                 onBlur={handleBlur}
-                 className="fields"
                 />
                 <p>{errors.name && touched.name && errors.name}</p>
                 <TextField 
@@ -68,32 +66,50 @@ function Payment() {
                 placeholder="ID"
                 onChange={handleChange}
                 value={values.id}
-                className="fields"
+                className="numbers"
                 />
                <p style={{color:"red"}}>{errors.id && touched.id && errors.id}</p>
  
-               <div >
-            <PaymentInputsWrapper {...wrapperProps} className="fields">
-                
-              <Field name="cardNumber">
-                {({ field }) => (
-                  <input {...getCardNumberProps({ onBlur: field.onBlur, onChange: field.onChange })} />
-                )}
-              </Field>
-                <div>
+               <TextField  
+                type="number" 
+                name="cardNum" 
+                placeholder="Card number"
+                onChange={handleChange}
+                value={values.cardNum}
+                />
+               <p style={{color:"red"}}>{errors.cardNum && touched.cardNum && errors.cardNum}</p>
 
-              <Field name="expiryDate">
-                {({ field }) => (
-                  <input {...getExpiryDateProps({ onBlur: field.onBlur, onChange: field.onChange })} />
-                )}
-              </Field>
-              <Field name="cvc">
-                {({ field }) => <input {...getCVCProps({ onBlur: field.onBlur, onChange: field.onChange })} />}
-              </Field>
-                </div>
-            </PaymentInputsWrapper>
-          </div>
-                <Button type="submit" className="fields">Login</Button>
+               <TextField 
+                type="month" 
+                name="date" 
+                placeholder="Date"
+                onChange={handleChange}
+                value={values.date}
+                className="date"
+                />
+               <p style={{color:"red"}}>{errors.date && touched.date && errors.date}</p>
+                
+            
+               <TextField 
+                type="number" 
+                name="cvc" 
+                placeholder="CVC"
+                onChange={handleChange}
+                value={values.cvc}
+                max="999"
+                min="100"
+                />
+               <p style={{color:"red"}}>{errors.cvc && touched.cvc && errors.cvc}</p>
+
+               <div className='agreetearms'>
+                <TextField type="checkBox" name="tearms" onChange={handleChange} value={values.tearms}/>
+                <h5>agree to all tearms</h5>
+               </div>
+               <p>{errors.tearms && touched.tearms && errors.tearms}</p>
+
+
+
+                <Button type="submit">Login</Button>
                 </form>
                 )}
             </Formik>

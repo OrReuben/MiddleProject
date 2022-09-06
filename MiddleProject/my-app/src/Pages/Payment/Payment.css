@@ -11,6 +11,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.fields{
-    width: 100%;
+.date{
+    width: 70%;
+}
+.agreetearms{
+    display: flex;
+    padding-left: 25%;
 }
