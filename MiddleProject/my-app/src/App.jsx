@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Register from "./Pages/Register/Register";
@@ -11,12 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="payment">Payment</Link></li>
-      <li><Link to="register">Register</Link></li>
-      <li><Link to="about">About</Link></li>
-      </ul>
+      
 
       <Routes>
         <Route path="/" element={<Home />} />
