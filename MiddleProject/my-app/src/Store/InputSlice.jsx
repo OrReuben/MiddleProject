@@ -2,16 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const InputSlice = createSlice({
   name: "input",
-  initialState: { value: "name" },
+  initialState: {
+    objValue: [],
+  },
   reducers: {
-    incrament: (state) => {
-      state.value = "hello world";
+    addData: (state, action) => {
+      state.objValue = [...state.objValue, action.payload]
+      console.log(state.objValue);
     },
-    decrament: (state) => {
-      state.value = "Or Reuben";
-    },
+ 
   },
 });
-export const { incrament, decrament } = InputSlice.actions;
-export const selectInput = (state) => state.input.value;
+export const { addData } = InputSlice.actions;
+export const selectInput = (state) => state.input.objValue;
 export default InputSlice.reducer;

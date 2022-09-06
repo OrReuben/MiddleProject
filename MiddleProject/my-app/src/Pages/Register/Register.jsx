@@ -1,8 +1,17 @@
 import { Formik, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import './Register.css'
+import "./Register.css";
+import { addData } from "../../Store/InputSlice";
+import { useDispatch } from "react-redux";
 
 function Register() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const Redirection = (values) => {
+    dispatch(addData(values));
+    navigate('/')
+  };
   const schema = Yup.object().shape({
     Username: Yup.string()
       .required("Username is required!")
@@ -14,7 +23,7 @@ function Register() {
 
     ConfirmPassword: Yup.string()
       .required("Confirming is required!")
-      .oneOf([Yup.ref("password"), null], "Passwords must match"),
+      .oneOf([Yup.ref("Password"), null], "Passwords must match"),
 
     Mail: Yup.string()
       .required("Mail is required!")
@@ -23,11 +32,9 @@ function Register() {
 
     PhoneNumber: Yup.string()
       .required("Phone number is required!")
-      .min(10, "The phone number isn't long enough!"),
+      .min(9, "The phone number isn't long enough!"),
 
-    Date: Yup.string()
-      .required("Date is required!"),
-      
+    Date: Yup.string().required("Date is required!"),
 
     Checkbox: Yup.bool().oneOf(
       [true, null],
@@ -49,6 +56,7 @@ function Register() {
           Checkbox: false,
         }}
         validationSchema={schema}
+        onSubmit={Redirection}
       >
         {({
           handleSubmit,
@@ -59,7 +67,7 @@ function Register() {
           touched,
         }) => (
           <form onSubmit={handleSubmit} noValidate>
-            <label for="username">
+            <label htmlFor="username">
               {" "}
               <b>Username</b>
             </label>
@@ -75,7 +83,7 @@ function Register() {
             <p style={{ color: "red" }}>
               {errors.Username && touched.Username && errors.Username}
             </p>
-            <label for="psw">
+            <label htmlFor="psw">
               {" "}
               <b>Password</b>
             </label>
@@ -91,7 +99,7 @@ function Register() {
             <p style={{ color: "red" }}>
               {errors.Password && touched.Password && errors.Password}
             </p>
-            <label for="psw-repeat">
+            <label htmlFor="psw-repeat">
               <b>Confirm Password</b>
             </label>
             <input
@@ -108,7 +116,7 @@ function Register() {
                 touched.ConfirmPassword &&
                 errors.ConfirmPassword}
             </p>
-            <label for="mail">
+            <label htmlFor="mail">
               {" "}
               <b>Mail</b>
             </label>
@@ -124,7 +132,7 @@ function Register() {
             <p style={{ color: "red" }}>
               {errors.Mail && touched.Mail && errors.Mail}
             </p>
-            <label for="phone-number">
+            <label htmlFor="phone-number">
               {" "}
               <b>Phone Number</b>
             </label>
@@ -140,12 +148,12 @@ function Register() {
             <p style={{ color: "red" }}>
               {errors.PhoneNumber && touched.PhoneNumber && errors.PhoneNumber}
             </p>
-            <label for="date">
+            <label htmlFor="date">
               {" "}
               <b>Date</b>
             </label>
             <input
-              id="phone-number"
+              id="date"
               type="date"
               name="Date"
               placeholder="Date"
@@ -157,7 +165,7 @@ function Register() {
               {errors.Date && touched.Date && errors.Date}
             </p>
             <div className="checkbox">
-              <label for="checkbox">
+              <label htmlFor="checkbox">
                 <b>I agree to the terms and conditions</b>
               </label>
               <Field
