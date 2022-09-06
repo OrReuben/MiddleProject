@@ -1,17 +1,10 @@
 import { Button } from '@mui/material';
-import { FormInput } from 'card-payment-form';
 import * as Yup from "yup"
 import TextField from '@mui/material/TextField';
-import Input from '@mui/material/Input';
-import { useState } from 'react';
 import "./Payment.css"
 import { Formik, Field } from 'formik';
 import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
 
-
-const handleInput = (value) => {
-  console.log(value)
-}
 const schema= Yup.object().shape({
   name:Yup.string()
   .required("Plz enter name!!!")
@@ -23,8 +16,6 @@ const schema= Yup.object().shape({
   .positive("A phone number can't start with a minus")
   .min(100000000,'enterd vaild Id should have 9 charcters')
   .max(999999999,"enterd vaild Id should have 9 charcters not more"),
-
-
 })
 function Payment() {
   const {
@@ -34,9 +25,6 @@ function Payment() {
     getCVCProps,
     wrapperProps
   } = usePaymentInputs();
-
-
-
     return (
       <div className="Payment">
     Payment
