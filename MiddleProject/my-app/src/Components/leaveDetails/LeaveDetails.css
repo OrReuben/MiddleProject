@@ -1,0 +1,18 @@
+.LeaveDetailsForm{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgba(29, 180, 180, 0.731);
+}
+.LeaveDetailsSection{
+    display: flex;
+    -webkit-text-stroke-color: #3aa1e0;
+    font-size: 90px;
+    font-weight: 700;
+    color: rgb(0, 198, 205);
+    text-align: left;
+    font-family: gilroy,sans-serif;
+    margin: 0;
+    box-sizing: inherit;
+
+}
