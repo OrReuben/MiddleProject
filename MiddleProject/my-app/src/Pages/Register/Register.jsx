@@ -1,192 +1,212 @@
-import { Formik, Field } from "formik";
 import { useNavigate } from "react-router-dom";
-import * as Yup from "yup";
-import "./Register.css";
 import { addData } from "../../Store/InputSlice";
 import { useDispatch } from "react-redux";
+import React from "react";
+import {
+  Grid,
+  makeStyles,
+  Card,
+  CardContent,
+  MenuItem,
+  InputLabel,
+  Select,
+  CardActions,
+  Button,
+  CardHeader,
+  FormControl,
+} from "@material-ui/core";
 
-function Register() {
-  const navigate = useNavigate()
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import { TextField } from "formik-material-ui";
+
+const useStyle = makeStyles((theme) => ({
+  padding: {
+    margin: "0px 10px"
+  },
+  button: {
+    margin: theme.spacing(1),
+  },
+  background: {
+    backgroundImage: "linear-gradient(to right, #EF9A9A, #EEEEE2, #EF9A9A)",
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+  },
+}));
+
+//Data
+const initialValues = {
+  username: "",
+  following: "",
+  phoneNumber: "",
+  pswRepeat: "",
+  email: "",
+  password: "",
+};
+
+const options = [
+  { label: "None", value: "none" },
+  { label: "Facebook", value: "Facebook" },
+  { label: "Snapchat", value: "snapchat" },
+  { label: "Instagram", value: "instagram" },
+];
+
+//password validation
+const lowercaseRegEx = /(?=.*[a-z])/;
+const uppercaseRegEx = /(?=.*[A-Z])/;
+const numericRegEx = /(?=.*[0-9])/;
+const lengthRegEx = /(?=.{6,})/;
+
+//validation schema
+let schema = Yup.object().shape({
+  username: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"),
+  password: Yup.string()
+    .matches(
+      lowercaseRegEx,
+      "Must contain one lowercase alphabetical character!"
+    )
+    .matches(
+      uppercaseRegEx,
+      "Must contain one uppercase alphabetical character!"
+    )
+    .matches(numericRegEx, "Must contain one numeric character!")
+    .matches(lengthRegEx, "Must contain 6 characters!")
+    .required("Required!"),
+  pswRepeat: Yup.string()
+    .required("Required!")
+    .oneOf([Yup.ref("password"), null], "Passwords must match"),
+  phoneNumber: Yup.string().required("Required"),
+});
+
+const Register = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const Redirection = (values) => {
     dispatch(addData(values));
-    navigate('/')
+    navigate("/");
   };
-  const schema = Yup.object().shape({
-    Username: Yup.string()
-      .required("Username is required!")
-      .min(6, "The username should have atleast 6 characters"),
-
-    Password: Yup.string()
-      .required("Password is required!")
-      .min(8, "the password should have atleast 8 characters"),
-
-    ConfirmPassword: Yup.string()
-      .required("Confirming is required!")
-      .oneOf([Yup.ref("Password"), null], "Passwords must match"),
-
-    Mail: Yup.string()
-      .required("Mail is required!")
-      .email("Must be a vaild mail!")
-      .max(255),
-
-    PhoneNumber: Yup.string()
-      .required("Phone number is required!")
-      .min(9, "The phone number isn't long enough!"),
-
-    Date: Yup.string().required("Date is required!"),
-
-    Checkbox: Yup.bool().oneOf(
-      [true, null],
-      "You need to accept the terms and conditions"
-    ),
-  });
-
+  const classes = useStyle();
   return (
-    <div className="Register">
-      <h1>Register</h1>
-      <Formik
-        initialValues={{
-          Username: "",
-          Password: "",
-          ConfirmPassword: "",
-          Mail: "",
-          PhoneNumber: "",
-          Date: "",
-          Checkbox: false,
-        }}
-        validationSchema={schema}
-        onSubmit={Redirection}
-      >
-        {({
-          handleSubmit,
-          handleChange,
-          handleBlur,
-          values,
-          errors,
-          touched,
-        }) => (
-          <form onSubmit={handleSubmit} noValidate>
-            <label htmlFor="username">
-              {" "}
-              <b>Username</b>
-            </label>
-            <input
-              id="username"
-              type="text"
-              name="Username"
-              placeholder="Username"
-              onChange={handleChange}
-              value={values.Username}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.Username && touched.Username && errors.Username}
-            </p>
-            <label htmlFor="psw">
-              {" "}
-              <b>Password</b>
-            </label>
-            <input
-              id="psw"
-              type="password"
-              name="Password"
-              placeholder="Password"
-              onChange={handleChange}
-              value={values.Password}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.Password && touched.Password && errors.Password}
-            </p>
-            <label htmlFor="psw-repeat">
-              <b>Confirm Password</b>
-            </label>
-            <input
-              id="psw-repeat"
-              type="password"
-              name="ConfirmPassword"
-              placeholder="Confirm Password"
-              onChange={handleChange}
-              value={values.ConfirmPassword}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.ConfirmPassword &&
-                touched.ConfirmPassword &&
-                errors.ConfirmPassword}
-            </p>
-            <label htmlFor="mail">
-              {" "}
-              <b>Mail</b>
-            </label>
-            <input
-              id="mail"
-              type="email"
-              name="Mail"
-              placeholder="Mail"
-              onChange={handleChange}
-              value={values.Mail}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.Mail && touched.Mail && errors.Mail}
-            </p>
-            <label htmlFor="phone-number">
-              {" "}
-              <b>Phone Number</b>
-            </label>
-            <input
-              id="phone-number"
-              type="number"
-              name="PhoneNumber"
-              placeholder="Phone Number"
-              onChange={handleChange}
-              value={values.PhoneNumber}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.PhoneNumber && touched.PhoneNumber && errors.PhoneNumber}
-            </p>
-            <label htmlFor="date">
-              {" "}
-              <b>Date</b>
-            </label>
-            <input
-              id="date"
-              type="date"
-              name="Date"
-              placeholder="Date"
-              onChange={handleChange}
-              value={values.Date}
-              onBlur={handleBlur}
-            />
-            <p style={{ color: "red" }}>
-              {errors.Date && touched.Date && errors.Date}
-            </p>
-            <div className="checkbox">
-              <label htmlFor="checkbox">
-                <b>I agree to the terms and conditions</b>
-              </label>
-              <Field
-                id="checkbox"
-                type="checkbox"
-                name="Checkbox"
-                onChange={handleChange}
-              />{" "}
-              <br />
-            </div>
-            <p style={{ color: "red" }}>
-              {errors.Checkbox && touched.Checkbox && errors.Checkbox}
-            </p>
-            <button className="registerbtn" type="submit">
-              Register
-            </button>
-          </form>
-        )}
-      </Formik>
-    </div>
+      <div className={classes.background}>
+        <Grid container justifyContent="center" spacing={1}>
+          <Grid item md={6}>
+            <Card className={classes.padding}>
+              <CardHeader title="REGISTER"></CardHeader>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={schema}
+                onSubmit={Redirection}
+              >
+                {({ dirty, isValid, values, handleChange, handleBlur }) => {
+                  return (
+                    <Form>
+                      <CardContent>
+                        <Grid
+                          item
+                          container
+                          spacing={1}
+                          justifyContent="center"
+                        >
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Username"
+                              variant="outlined"
+                              fullWidth
+                              type="text"
+                              name="username"
+                              value={values.username}
+                              component={TextField}
+                            />
+                          </Grid>
+
+                          <Grid item xs={9} sm={6} md={12}>
+                            <FormControl fullWidth variant="outlined">
+                              <InputLabel id="demo-simple-select-outlined-label">
+                                Following?
+                              </InputLabel>
+                              <Select
+                                labelId="demo-simple-select-outlined-label"
+                                id="demo-simple-select-outlined"
+                                label="Following"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.following}
+                                name="following"
+                              >
+                                {options.map((item) => (
+                                  <MenuItem key={item.value} value={item.value}>
+                                    {item.label}
+                                  </MenuItem>
+                                ))}
+                              </Select>
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Phone Number"
+                              variant="outlined"
+                              fullWidth
+                              name="phoneNumber"
+                              value={values.phoneNumber}
+                              component={TextField}
+                            />
+                          </Grid>
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Email"
+                              variant="outlined"
+                              fullWidth
+                              name="email"
+                              value={values.email}
+                              component={TextField}
+                            />
+                          </Grid>
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Password"
+                              variant="outlined"
+                              fullWidth
+                              name="password"
+                              value={values.password}
+                              type="password"
+                              component={TextField}
+                            />
+                          </Grid>
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Confirm Password"
+                              variant="outlined"
+                              fullWidth
+                              name="pswRepeat"
+                              type="password"
+                              value={values.pswRepeat}
+                              component={TextField}
+                            />
+                          </Grid>
+                        </Grid>
+                      </CardContent>
+                      <CardActions>
+                        <Button
+                          disabled={!dirty || !isValid}
+                          variant="contained"
+                          color="primary"
+                          type="Submit"
+                          className={classes.button}
+                        >
+                          REGISTER
+                        </Button>
+                      </CardActions>
+                    </Form>
+                  );
+                }}
+              </Formik>
+            </Card>
+          </Grid>
+        </Grid>
+      </div>
   );
-}
+};
 
 export default Register;

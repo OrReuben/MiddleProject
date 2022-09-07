@@ -4,13 +4,13 @@ import {red} from '@mui/material/colors'
 export const theme = createTheme({
     palette:{
         primary:{
-            main:red[200],
+            main:red[300],
         },
         secondary:{
-            main:red[50]
+            main:red[100]
         },
         otherColor:{
-            main:red[300]
+            main:red[400]
         }
     }
 })
