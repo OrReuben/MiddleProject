@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
-import { cleanup } from "@testing-library/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Reviews from "./Reviews";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import "./Reviews.css"
 function BtmReviews() {
   const [counter,setCounter]=useState(0);
@@ -43,9 +44,13 @@ function BtmReviews() {
   return (
     <div className="Home">
         <div className="comlete">
-        <Button onClick={()=>{navigetinReviews(1)}}>back</Button>
+          <Button>
+        <ArrowBackIosNewIcon className="btmRL" onClick={()=>{navigetinReviews(1)}}></ArrowBackIosNewIcon>
+          </Button>
        <Reviews name={reviewsStr[counter].name} discripion={reviewsStr[counter].discripion} image={reviewsStr[counter].image} counter={counter} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
-       <Button onClick={()=>{navigetinReviews(2)}}>next</Button>
+      <Button>
+       <ArrowForwardIosIcon className="btmRR" onClick={()=>{navigetinReviews(2)}}></ArrowForwardIosIcon>
+      </Button>
         </div>
       </div>
     );

@@ -1,0 +1,9 @@
+.CadrsP{
+    display: flex;
+    width: 100vw;
+    background: rgb(240, 184, 136);
+    justify-content: center;
+    height: 80vh;
+    padding-top: 11%;
+  }
+ 
