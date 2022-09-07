@@ -1,7 +1,4 @@
 
-import Calender from "../../Components/Callender/Callender";
-import LeaveDetails from "../../Components/leaveDetails/LeaveDetails";
-import BtmReviews from "../../Components/Reviews/BtmReviews";
 import React from 'react'
 import videoBg from './VideoBg.mp4'
 import './Home.css'
