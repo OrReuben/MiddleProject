@@ -4,23 +4,26 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Register from "./Pages/Register/Register";
 import Payment from "./Pages/Payment/Payment";
-import Navbar from "./Components/Navbar/Navbar";
-import Misssion from "./Components/Mission/Mission";
+import Pricing from "./Components/Pricing/Pricing";
+
 
 
 function App() {
   return (
     <div className="App">
-      <Home/>
-      <Navbar />
       
-{/* 
+      {/* <Home/> */}
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="payment" element={<Payment />} />
         <Route path="register" element={<Register />} />
         <Route path="about" element={<About />} />
-      </Routes> */}
+      </Routes>
+
+      </div>
+      <Pricing />
+
 
     </div>
   );
