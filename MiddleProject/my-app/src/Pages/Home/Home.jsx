@@ -3,6 +3,7 @@
 import React from 'react'
 import videoBg from './VideoBg.mp4'
 import './Home.css'
+import Mission from '../../Components/Mission/Mission'
 const Home = () => {
   return (
     <div className='Home'>
@@ -12,8 +13,8 @@ const Home = () => {
         <h1>Welcome</h1>
         <p>Let's bring your dream to reality</p>
 
-
       </div>
+        <Mission />
     </div>
   )
 }

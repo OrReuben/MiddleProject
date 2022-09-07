@@ -35,6 +35,7 @@ const useStyle = makeStyles((theme) => ({
 
 //Data
 const initialValues = {
+  date: "",
   cardName: "",
   cardNumber: "",
   expDate: "",
@@ -43,6 +44,7 @@ const initialValues = {
 
 //validation schema
 let schema = Yup.object().shape({
+  date: Yup.string().required("Required"),
   cardName: Yup.string()
     .required("Required")
     .min(6, "Must contain 6 characters!"),
@@ -75,6 +77,18 @@ const Payment = () => {
                   <Form>
                     <CardContent>
                       <Grid item container spacing={1} justifyContent="center">
+                        <Grid item xs={12} sm={12} md={12}>
+                          <Field
+                            label=""
+                            variant="outlined"
+                            fullWidth
+                            name="date"
+                            value={values.date}
+                            type="date"
+                            helperText="Date of event"
+                            component={TextField}
+                          />
+                        </Grid>
                         <Grid item xs={12} sm={12} md={12}>
                           <Field
                             label="Card Name"

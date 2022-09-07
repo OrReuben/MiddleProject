@@ -43,25 +43,24 @@ export default function Mission() {
         }}
       >
         <Container maxWidth="sm">
-          
-            <div className="wrapper">
-              <div className="static-txt">Let's</div>
-              <ul className="dynamic-txts">
-                <li>
-                  <span>Start</span>
-                </li>
-                <li>
-                  <span>Begin</span>
-                </li>
-                <li>
-                  <span>Innovate</span>
-                </li>
-                <li>
-                  <span>Create</span>
-                </li>
-              </ul>
-            </div>
-  
+          <div className="wrapper" id="pricing">
+            <div className="static-txt">Let's</div>
+            <ul className="dynamic-txts">
+              <li>
+                <span>Start</span>
+              </li>
+              <li>
+                <span>Begin</span>
+              </li>
+              <li>
+                <span>Innovate</span>
+              </li>
+              <li>
+                <span>Create</span>
+              </li>
+            </ul>
+          </div>
+
           <Typography
             variant="h5"
             align="center"
@@ -78,7 +77,9 @@ export default function Mission() {
             spacing={2}
             justifyContent="center"
           >
-            <Button variant="contained">Lets start</Button>
+            <Button variant="contained" href="pricing">
+              Lets start
+            </Button>
           </Stack>
         </Container>
       </Box>

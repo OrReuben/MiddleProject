@@ -15,6 +15,7 @@ export const InputSlice = createSlice({
     ],
     cardObj: [
       {
+        date: "",
         cardName: "",
         cardNumber: "",
         expDate: "",
@@ -27,10 +28,10 @@ export const InputSlice = createSlice({
       state.objValue = [...state.objValue, action.payload];
       console.log(state.objValue);
     },
-    addCard: (state,action) => {
-      state.cardObj = [...state.cardObj, action.payload]
+    addCard: (state, action) => {
+      state.cardObj = [...state.cardObj, action.payload];
       console.log(state.cardObj);
-    }
+    },
   },
 });
 export const { addData, addCard } = InputSlice.actions;

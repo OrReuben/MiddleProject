@@ -95,26 +95,26 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-                <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>About us</Typography>
-                  </Button>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>pricing</Typography>
-                  </Button>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>reviews</Typography>
-                  </Button>
-                </Box>
+              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "red", display: "block" }}
+                >
+                  <Typography>About us</Typography>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "red", display: "block" }}
+                >
+                  <Typography>pricing</Typography>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "red", display: "block" }}
+                >
+                  <Typography>reviews</Typography>
+                </Button>
+              </Box>
             </Menu>
           </Box>
           <Link to="/">
@@ -149,26 +149,23 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr:3,mt:3 }}
+              sx={{ my: 2, color: "white", display: "block", mr: 3, mt: 3 }}
               href="about"
-              >
-              
+            >
               <Typography>About us</Typography>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 3, color: "white", display: "block", mr:3}}
-              href="register"
-              >
-              
+              sx={{ my: 3, color: "white", display: "block", mr: 3 }}
+              href="#pricing"
+            >
               <Typography className="navbar-button">pricing</Typography>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr:3, mt:3 }}
-              href="payment"
-              >
-              
+              sx={{ my: 2, color: "white", display: "block", mr: 3, mt: 3 }}
+              href="pricing"
+            >
               <Typography className="navbar-button">reviews</Typography>
             </Button>
           </Box>
