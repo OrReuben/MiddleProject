@@ -11,13 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-const pages = ["About Us", "Pricing", "Reviews"];
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
@@ -55,8 +52,8 @@ const Navbar = () => {
             <Box
               component="img"
               sx={{
-                width:"75px",
-                height:"75px",
+                width: "75px",
+                height: "75px",
                 display: { xs: "none", md: "block" },
               }}
               alt="logo"
@@ -64,7 +61,12 @@ const Navbar = () => {
             />
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", justifyContent:"center", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", justifyContent: "center", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -93,11 +95,26 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+                <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "red", display: "block" }}
+                  >
+                    <Typography>About us</Typography>
+                  </Button>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "red", display: "block" }}
+                  >
+                    <Typography>pricing</Typography>
+                  </Button>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "red", display: "block" }}
+                  >
+                    <Typography>reviews</Typography>
+                  </Button>
+                </Box>
             </Menu>
           </Box>
           <Link to="/">
@@ -105,8 +122,8 @@ const Navbar = () => {
             <Box
               component="img"
               sx={{
-                width:"75px",
-                height:"75px",
+                width: "75px",
+                height: "75px",
                 display: { xs: "block", md: "none" },
               }}
               alt="logo"
@@ -128,18 +145,32 @@ const Navbar = () => {
               color: "inherit",
               textDecoration: "none",
             }}
-          >
-          </Typography>
+          ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block", mr:3,mt:3 }}
+              href="about"
               >
-                {page}
-              </Button>
-            ))}
+              
+              <Typography>About us</Typography>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 3, color: "white", display: "block", mr:3}}
+              href="register"
+              >
+              
+              <Typography className="navbar-button">pricing</Typography>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block", mr:3, mt:3 }}
+              href="payment"
+              >
+              
+              <Typography className="navbar-button">reviews</Typography>
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
