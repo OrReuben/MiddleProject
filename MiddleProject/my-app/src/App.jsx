@@ -5,14 +5,14 @@ import About from "./Pages/About/About";
 import Register from "./Pages/Register/Register";
 import Payment from "./Pages/Payment/Payment";
 import Pricing from "./Components/Pricing/Pricing";
+import Mission from "./Components/Mission/Mission";
+import BtmReviews from "./Components/Reviews/BtmReviews";
 
 
 
 function App() {
   return (
     <div className="App">
-      
-      {/* <Home/> */}
       <div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,11 +20,10 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="about" element={<About />} />
       </Routes>
-
       </div>
-      <Pricing />
-
-
+      {/* <Pricing /> */}
+      <Mission/>
+      <BtmReviews/>
     </div>
   );
 }

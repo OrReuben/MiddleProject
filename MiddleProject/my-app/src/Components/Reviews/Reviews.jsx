@@ -10,7 +10,7 @@ import { useEffect } from "react";
 export default function Reviews(prpos) {
    
   return (
-    <Card sx={{ maxWidth: 700 }}>
+    <Card sx={{ width: 1 }}>
       <CardMedia
         component="img"
         height="450"
@@ -25,10 +25,6 @@ export default function Reviews(prpos) {
             {prpos.discripion}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

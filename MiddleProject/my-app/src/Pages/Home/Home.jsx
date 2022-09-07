@@ -13,7 +13,6 @@ const Home = () => {
       <div className="content">
         <h1>Welcome</h1>
         <p>Let's bring your dream to reality</p>
-               <BtmReviews></BtmReviews>
 
 
       </div>

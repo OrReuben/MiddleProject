@@ -43,9 +43,9 @@ function BtmReviews() {
   return (
     <div className="Home">
         <div className="comlete">
-        <Button onClick={()=>{navigetinReviews(1)}}>back</Button>
+        <Button  onClick={()=>{navigetinReviews(1)}}>back</Button>
        <Reviews name={reviewsStr[counter].name} discripion={reviewsStr[counter].discripion} image={reviewsStr[counter].image} counter={counter} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
-       <Button onClick={()=>{navigetinReviews(2)}}>next</Button>
+       <Button  onClick={()=>{navigetinReviews(2)}}>next</Button>
         </div>
       </div>
     );
