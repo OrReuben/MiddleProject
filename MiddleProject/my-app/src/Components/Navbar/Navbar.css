@@ -1,7 +1,15 @@
-#root > div > div.MuiBox-root.css-k008qs > nav.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-1c7v4pa-MuiPaper-root-MuiAppBar-root > div > div.MuiTypography-root.MuiTypography-h6.css-p7bec2-MuiTypography-root{
-    text-align: left;
+#root > div > header{
+    position:relative;
+    z-index: 1000;
 }
-.css-hyum1k-MuiToolbar-root{
-    padding-left: 50px;
-    padding-right: 50px;
+#root > div > header > div > div > div.MuiBox-root.css-1t6c9ts{
+    justify-content: center;
+}
+#root > div > header > div > div > div.MuiBox-root.css-16pm72g{
+    justify-content: left;
+}
+img{
+    margin: 3px 0px;
+    height:75px;
+    width:75px;
 }
