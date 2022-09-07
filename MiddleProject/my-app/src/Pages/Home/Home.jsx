@@ -1,4 +1,6 @@
 import Calender from "../../Components/Callender/Callender";
+import LeaveDetails from "../../Components/leaveDetails/LeaveDetails";
+import BtmReviews from "../../Components/Reviews/BtmReviews";
 
 
 function Home() {
@@ -7,6 +9,8 @@ function Home() {
         Home
        <p> hello username </p> 
        < Calender />
+       <BtmReviews></BtmReviews>
+       <LeaveDetails></LeaveDetails>
       </div>
     );
   }
