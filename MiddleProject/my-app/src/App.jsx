@@ -9,6 +9,16 @@ import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
 
+import OurProduct from "./Components/OurProduct/OurProduct";
+import InfoCard from "./Components/card-info/infoCard";
+import Reviews from "./Components/Reviews/Reviews";
+
+
+
+
+
+
+
 
 
 function App() {
@@ -27,7 +37,9 @@ function App() {
           <Route path="event-date" element={<Calender />} />
         </Routes>
       </div>
-      
+ <OurProduct/>
+<InfoCard/>
+
     </div>
   );
 }
