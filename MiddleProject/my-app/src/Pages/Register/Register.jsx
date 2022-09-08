@@ -20,24 +20,27 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { TextField } from "formik-material-ui";
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = makeStyles(() => ({
   padding: {
     margin: "0px 10px"
   },
   button: {
-    margin: theme.spacing(1),
+    margin: 8
   },
   background: {
     backgroundImage: "linear-gradient(to right, #EF9A9A, #EEEEE2, #EF9A9A)",
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    position:"relative",
+    zIndex:5
   },
 }));
 
 //Data
 const initialValues = {
   username: "",
+  url:"",
   following: "",
   phoneNumber: "",
   pswRepeat: "",
@@ -109,6 +112,17 @@ const Register = () => {
                           spacing={1}
                           justifyContent="center"
                         >
+                          <Grid item xs={9} sm={6} md={6}>
+                            <Field
+                              label="Profile Picture"
+                              variant="outlined"
+                              fullWidth
+                              type="text"
+                              name="url"
+                              value={values.url}
+                              component={TextField}
+                            />
+                          </Grid>
                           <Grid item xs={9} sm={6} md={6}>
                             <Field
                               label="Username"

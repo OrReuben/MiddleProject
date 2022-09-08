@@ -26,7 +26,9 @@ const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-
+  const navigateHome = () => {
+    navigate('/')
+  }
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -36,19 +38,27 @@ const Navbar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    navigate('/about')
+  };
+  const handleCloseNavMenu1 = () => {
+    setAnchorElNav(null);
+    navigate('/pricing')
+  };
+  const handleCloseNavMenu2 = () => {
+    setAnchorElNav(null);
+    navigate('/reviews')
+
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const redirection = () => {
-    navigate("register");
-  };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/">
+          
             {" "}
             <Box
               component="img"
@@ -56,11 +66,13 @@ const Navbar = () => {
                 width: "75px",
                 height: "75px",
                 display: { xs: "none", md: "block" },
+                cursor:"pointer"
               }}
               alt="logo"
               src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+              onClick={navigateHome}
             />
-          </Link>
+          
 
           <Box
             sx={{
@@ -102,25 +114,22 @@ const Navbar = () => {
                   variant="string"
                   disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
-                  href="about"
                 >
                   <Typography>About us</Typography>
                 </Button>
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={handleCloseNavMenu1}
                   variant="string"
                   disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
-                  href="pricing"
                 >
                   <Typography>pricing</Typography>
                 </Button>
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={handleCloseNavMenu2}
                   variant="string"
                   disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
-                  href="reviews"
                 >
                   <Typography>reviews</Typography>
                 </Button>
@@ -128,7 +137,6 @@ const Navbar = () => {
               </Box>
             </Menu>
           </Box>
-          <Link to="/">
             {" "}
             <Box
               component="img"
@@ -136,11 +144,12 @@ const Navbar = () => {
                 width: "75px",
                 height: "75px",
                 display: { xs: "block", md: "none" },
+                cursor:"pointer"
               }}
               alt="logo"
               src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+              onClick={navigateHome}
             />
-          </Link>
           <Typography
             variant="h5"
             noWrap
@@ -171,12 +180,11 @@ const Navbar = () => {
                 padding: 1.5,
                 borderRadius: 5,
               }}
-              href="about"
             >
               <Typography>About us</Typography>
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleCloseNavMenu1}
               variant="contained"
               disableElevation
               sx={{
@@ -188,12 +196,11 @@ const Navbar = () => {
                 padding: 1.5,
                 borderRadius: 5,
               }}
-              href="pricing"
             >
               <Typography className="navbar-button">pricing</Typography>
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleCloseNavMenu2}
               variant="contained"
               disableElevation
               sx={{
@@ -205,7 +212,6 @@ const Navbar = () => {
                 padding: 1.5,
                 borderRadius: 5,
               }}
-              href="reviews"
             >
               <Typography className="navbar-button">reviews</Typography>
             </Button>
@@ -215,7 +221,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={username[username.length - 1].url} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -236,7 +242,7 @@ const Navbar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" onClick={redirection}>
+                  <Typography textAlign="center" onClick={() => navigate('/register')}>
                     {setting}
                   </Typography>
                 </MenuItem>

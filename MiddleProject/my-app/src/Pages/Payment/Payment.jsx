@@ -16,6 +16,8 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { TextField } from "formik-material-ui";
 import { addCard } from "../../Store/InputSlice";
+import { useSelector } from "react-redux";
+import { Typography } from "@mui/material";
 
 const useStyle = makeStyles((theme) => ({
   padding: {
@@ -30,6 +32,8 @@ const useStyle = makeStyles((theme) => ({
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    position:"relative",
+    zIndex:5
   },
 }));
 
@@ -54,6 +58,7 @@ let schema = Yup.object().shape({
 });
 
 const Payment = () => {
+  const itemPrice = useSelector((state) => state.input.price)
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const Redirection = (values) => {
@@ -63,6 +68,7 @@ const Payment = () => {
   const classes = useStyle();
   return (
     <div className={classes.background}>
+      
       <Grid container justifyContent="center" spacing={1}>
         <Grid item md={6}>
           <Card className={classes.padding}>
@@ -135,6 +141,7 @@ const Payment = () => {
                         </Grid>
                       </Grid>
                     </CardContent>
+                    <Typography variant="h6">Subtotal to pay: ${itemPrice}</Typography>
                     <CardActions>
                       <Button
                         disabled={!dirty || !isValid}
