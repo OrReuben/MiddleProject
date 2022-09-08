@@ -23,14 +23,7 @@ const options = [
     { label: "Else", value: "Else" },
   ];
 export default function SignInSide() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  
 
   return (
     <div className='LeaveDetailsSection'>
@@ -52,7 +45,7 @@ export default function SignInSide() {
                     alignItems: 'center',
                 }}  >
                 
-                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }} >
+                <Box component="form" noValidate  sx={{ mt: 1 }} >
                     <TextField
                       margin="normal"
                       required

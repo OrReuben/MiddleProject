@@ -7,7 +7,8 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import "./Calender.css";
+import { useSelector } from "react-redux";
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
 };
@@ -18,20 +19,33 @@ const localizer = dateFnsLocalizer({
   getDay,
   locales,
 });
-const events = [
-
-];
 
 export default function Calender() {
-    const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
-    const [allEvents, setAllEvents] = useState(events);
-  
-    function handleAddEvent() {
-        setAllEvents([...allEvents, newEvent]);
-    }
-    return (
+  const date = useSelector((state) => state.input.cardObj);
+  const newDate = date[date.length - 1].date.split("/");
+  const newDate2 = `${newDate[2]} ${newDate[1] < 10 && newDate[1] % 10} ${
+    newDate[0] < 10 && newDate[0] % 10
+  }`;
+
+  console.log(newDate2);
+
+  const [Event, setEvent] = useState({ title: "", start: "", end: "" });
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState([
+    {
+      title: "event",
+      allDay: true,
+      start: new Date(newDate2),
+      end: new Date(newDate2),
+    },
+  ]);
+
+  function handleAddEvent() {
+    setAllEvents([...allEvents, newEvent]);
+  }
+  return (
     <div>
-        {/* <h1>Calendar</h1>
+      {/* <h1>Calendar</h1>
             <h2>Add New Event</h2>
             <div>
                 <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
