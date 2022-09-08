@@ -122,7 +122,6 @@ export default function Pricing() {
       />
       <CssBaseline />
 
-      {/* Hero unit */}
       <Container maxWidth="sm" component="main" sx={{ pt: 5, pb: 6 }}>
         <Typography
           component="h1"
