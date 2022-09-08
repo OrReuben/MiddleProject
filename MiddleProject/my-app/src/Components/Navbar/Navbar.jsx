@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
@@ -95,26 +96,36 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-                <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>About us</Typography>
-                  </Button>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>pricing</Typography>
-                  </Button>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "red", display: "block" }}
-                  >
-                    <Typography>reviews</Typography>
-                  </Button>
-                </Box>
+              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  variant="string"
+                  disableElevation
+                  sx={{ my: 2, color: "red", display: "block" }}
+                  href="about"
+                >
+                  <Typography>About us</Typography>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  variant="string"
+                  disableElevation
+                  sx={{ my: 2, color: "red", display: "block" }}
+                  href="pricing"
+                >
+                  <Typography>pricing</Typography>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  variant="string"
+                  disableElevation
+                  sx={{ my: 2, color: "red", display: "block" }}
+                  href="reviews"
+                >
+                  <Typography>reviews</Typography>
+                </Button>
+                <Dropdown />
+              </Box>
             </Menu>
           </Box>
           <Link to="/">
@@ -149,28 +160,56 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr:3,mt:3 }}
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
               href="about"
-              >
-              
+            >
               <Typography>About us</Typography>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 3, color: "white", display: "block", mr:3}}
-              href="register"
-              >
-              
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 3,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
+              href="pricing"
+            >
               <Typography className="navbar-button">pricing</Typography>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr:3, mt:3 }}
-              href="payment"
-              >
-              
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
+              href="reviews"
+            >
               <Typography className="navbar-button">reviews</Typography>
             </Button>
+            <Dropdown />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
