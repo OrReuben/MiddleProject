@@ -1,8 +1,8 @@
 #root > div > header{
-    position:relative;
-    z-index: 1000;
+    position:fixed;
+    z-index: 4;
 }
-#root > div > header > div > div > div.MuiBox-root.css-1t6c9ts{
+.css-1t6c9ts{
     justify-content: center;
 }
 #root > div > header > div > div > div.MuiBox-root.css-16pm72g{

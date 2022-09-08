@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -9,11 +8,14 @@ import CardHeader from "@mui/material/CardHeader";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import StarIcon from "@mui/icons-material/StarBorder";
-
+import { addPrice } from "../../Store/InputSlice";
+import { useDispatch } from "react-redux";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 function Copyright(props) {
   return (
@@ -22,6 +24,8 @@ function Copyright(props) {
       color="text.secondary"
       align="center"
       {...props}
+      paddingBottom="10px"
+      paddingTop="45px"
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
@@ -72,7 +76,6 @@ const tiers = [
     buttonVariant: "outlined",
   },
 ];
-
 const footers = [
   {
     title: "Company",
@@ -104,20 +107,22 @@ const footers = [
 ];
 
 export default function Pricing() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const priceList = tiers.map((tier) => tier.price);
   return (
-    <React.Fragment>
+    <div
+      style={{
+        backgroundImage: "linear-gradient(to right, #FFEFBA, #F9F9F9, #FFEFBA)",
+      }}
+    >
+      <Navbar />
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
       />
       <CssBaseline />
 
-      {/* Hero unit */}
-      <Container
-        disableGutters
-        maxWidth="sm"
-        component="main"
-        sx={{ pt: 8, pb: 6 }}
-      >
+      <Container maxWidth="sm" component="main" sx={{ pt: 5, pb: 6 }}>
         <Typography
           component="h1"
           variant="h2"
@@ -138,20 +143,13 @@ export default function Pricing() {
           little customization.
         </Typography>
       </Container>
-      {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
-            <Grid
-              item
-              key={tier.title}
-              xs={12}
-              sm={tier.title === "Enterprise" ? 12 : 6}
-              md={4}
-            >
+          {tiers.map((tier, index) => (
+            <Grid item xs={12} sm={tier.title === "Enterprise" ? 12 : 6} md={4}>
               <Card>
                 <CardHeader
+                key={index}
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}
@@ -162,7 +160,7 @@ export default function Pricing() {
                   sx={{
                     backgroundColor: (theme) =>
                       theme.palette.mode === "light"
-                        ? theme.palette.grey[200]
+                        ? theme.palette.grey[300]
                         : theme.palette.grey[700],
                   }}
                 />
@@ -182,9 +180,6 @@ export default function Pricing() {
                     >
                       ${tier.price}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary">
-                      /mo
-                    </Typography>
                   </Box>
                   <ul>
                     {tier.description.map((line) => (
@@ -200,8 +195,13 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button href="payment" fullWidth variant={tier.buttonVariant}>
-                    {tier.buttonText}
+                 <Button
+                    onClick={() => {navigate('/payment') 
+                    dispatch(addPrice(priceList[index]))}}
+                    fullWidth
+                    variant={tier.buttonVariant}
+                  >
+                     {tier.buttonText}
                   </Button>
                 </CardActions>
               </Card>
@@ -209,6 +209,7 @@ export default function Pricing() {
           ))}
         </Grid>
       </Container>
-    </React.Fragment>
+      <Copyright />
+    </div>
   );
 }

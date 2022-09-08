@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
@@ -25,7 +26,9 @@ const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-
+  const navigateHome = () => {
+    navigate('/')
+  }
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,19 +38,27 @@ const Navbar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    navigate('/about')
+  };
+  const handleCloseNavMenu1 = () => {
+    setAnchorElNav(null);
+    navigate('/pricing')
+  };
+  const handleCloseNavMenu2 = () => {
+    setAnchorElNav(null);
+    navigate('/reviews')
+
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const redirection = () => {
-    navigate("register");
-  };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/">
+          
             {" "}
             <Box
               component="img"
@@ -55,11 +66,13 @@ const Navbar = () => {
                 width: "75px",
                 height: "75px",
                 display: { xs: "none", md: "block" },
+                cursor:"pointer"
               }}
               alt="logo"
               src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+              onClick={navigateHome}
             />
-          </Link>
+          
 
           <Box
             sx={{
@@ -98,26 +111,32 @@ const Navbar = () => {
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <Button
                   onClick={handleCloseNavMenu}
+                  variant="string"
+                  disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
                 >
                   <Typography>About us</Typography>
                 </Button>
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={handleCloseNavMenu1}
+                  variant="string"
+                  disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
                 >
                   <Typography>pricing</Typography>
                 </Button>
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={handleCloseNavMenu2}
+                  variant="string"
+                  disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
                 >
                   <Typography>reviews</Typography>
                 </Button>
+                <Dropdown />
               </Box>
             </Menu>
           </Box>
-          <Link to="/">
             {" "}
             <Box
               component="img"
@@ -125,11 +144,12 @@ const Navbar = () => {
                 width: "75px",
                 height: "75px",
                 display: { xs: "block", md: "none" },
+                cursor:"pointer"
               }}
               alt="logo"
               src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+              onClick={navigateHome}
             />
-          </Link>
           <Typography
             variant="h5"
             noWrap
@@ -149,31 +169,59 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr: 3, mt: 3 }}
-              href="about"
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
             >
               <Typography>About us</Typography>
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 3, color: "white", display: "block", mr: 3 }}
-              href="#pricing"
+              onClick={handleCloseNavMenu1}
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 3,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
             >
               <Typography className="navbar-button">pricing</Typography>
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", mr: 3, mt: 3 }}
-              href="pricing"
+              onClick={handleCloseNavMenu2}
+              variant="contained"
+              disableElevation
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                mr: 3,
+                alignSelf: "center",
+                padding: 1.5,
+                borderRadius: 5,
+              }}
             >
               <Typography className="navbar-button">reviews</Typography>
             </Button>
+            <Dropdown />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={username[username.length - 1].url} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -194,7 +242,7 @@ const Navbar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" onClick={redirection}>
+                  <Typography textAlign="center" onClick={() => navigate('/register')}>
                     {setting}
                   </Typography>
                 </MenuItem>
