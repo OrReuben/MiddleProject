@@ -2,17 +2,96 @@
     display: flex;
     flex-direction: column;
     width: 25%;
-    background-color: rgba(29, 180, 180, 0.731);
+    background-color: rgba(29, 180, 180, 0);
 }
 .LeaveDetailsSection{
+    background-image: linear-gradient(to top,#cceafd,#fff);
     display: flex;
-    -webkit-text-stroke-color: #3aa1e0;
-    font-size: 90px;
-    font-weight: 700;
-    color: rgb(0, 198, 205);
-    text-align: left;
-    font-family: gilroy,sans-serif;
-    margin: 0;
-    box-sizing: inherit;
-
+    justify-content: center;
+    height: 80vh;
+    padding-left: 20vw;
 }
+.css-1lhue4c-MuiPaper-root-MuiGrid-root {
+    
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0) !important
+    
+  
+}
+.css-1g7q5se-MuiTypography-root
+{
+
+    -webkit-text-stroke:1px #3aa1e0 !important
+}   
+    
+.cf7-main-title {
+    margin-bottom: 26px;
+}
+.text {
+    color: #0a0018;
+}
+.auto {
+    margin: auto;
+}
+.l-1 {
+    z-index: 10;
+}
+.line-2h5 {
+    line-height: 2.5;
+}
+.font-22 {
+    font-size: 22px;
+}
+.space-55 {
+    letter-spacing: .55px;
+}
+.fit {
+    width: fit-content;
+    padding-right: 17vw;
+}
+.ltr {
+    direction: ltr;
+}
+.bolder {
+    font-weight: 800;
+}
+.gilroy {
+    font-family: gilroy,sans-serif;
+}
+.pos-rel {
+    position: relative;
+}
+.allC{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttomC{
+    display: flex;
+}
+
+.AboutMe{
+    display: flex;
+}
+.abutMeD{
+    display: flex;
+    
+}
+.cf-contact {
+    margin-top: 77px;
+    padding-bottom: 108px;
+    max-width: 510px;
+}
+.sblack {
+    color: #111;
+}
+.narkiss {
+    font-family: narkissblock,sans-serif;
+}
+.rtl {
+    direction: rtl;
+}
+
+
+
+
+

@@ -1,9 +1,11 @@
 .comlete{
     display: flex;
     align-content: center;
+    padding-right: 50%;
+    height: 80vh;
 
 }
 .MuiButtonBase-root{
     position: absolute;
-    padding-top: 40vh;
+    padding-top: 80vh;
 }
