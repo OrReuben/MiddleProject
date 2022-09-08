@@ -67,10 +67,10 @@ export default function Dropdown() {
     <div>
       <Button
         style={{
-          "padding-top": "10%",
-          "margin-top": "20%",
-          "padding-bottom": "10%",
-          "border-radius": "30px",
+          paddingTop: "10%",
+          marginTop: "20%",
+          paddingBottom: "10%",
+          borderRadius: "30px",
           color: "white",
         }}
         id="demo-customized-button"
