@@ -50,7 +50,9 @@ video{
     padding-bottom: 40px;
     left: 0;
     right: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;}
     .hero__scroll .chevron {
       margin-top: 20px;
       display: block;
@@ -119,4 +121,8 @@ video{
     -webkit-transform: rotate(-135deg);
         -ms-transform: rotate(-135deg);
             transform: rotate(-135deg); }
-          
+  .header{
+    color:white;
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: black;
+  }

@@ -3,6 +3,7 @@ import videoBg from "./VideoBg.mp4";
 import "./Home.css";
 import OurProduct from "../../Components/OurProduct/OurProduct";
 import InfoCard from "../../Components/card-info/infoCard";
+import { Typography } from "@mui/material";
 
 const Home = () => {
   return (
@@ -11,26 +12,43 @@ const Home = () => {
         <div className="overlay"></div>
         <video src={videoBg} autoPlay loop muted />
         <div className="content">
-          <h1>Welcome</h1>
-          <p>Let's bring your dream to reality</p>
-
+          <div className="header">
+            <Typography
+              variant="h3"
+              fontWeight={900}
+              letterSpacing={3}
+              gutterBottom
+            >
+              WELCOME
+            </Typography>
+            <Typography variant="h5" fontWeight={800}>
+              Let's bring your dream to reality!
+            </Typography>
+          </div>
           <span
             className="hero__scroll aos-init aos-animate"
             data-aos="fade-up"
             data-aos-easing="ease"
             data-aos-delay="800"
-            style={{display:"flex", flexDirection:"column"}}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              fontWeight: "800",
+            }}
           >
             Scroll down <br />
-           <a href="#product"> <i className="chevron bottom"></i> </a>
+            <a href="#product">
+              {" "}
+              <i className="chevron bottom"></i>{" "}
+            </a>
           </span>
         </div>
       </div>
       <div id="product">
-      <OurProduct />
+        <OurProduct />
       </div>
       <div id="card">
-      <InfoCard />
+        <InfoCard />
       </div>
     </div>
   );

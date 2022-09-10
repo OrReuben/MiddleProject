@@ -12,7 +12,7 @@ export default function OurProduct() {
   return (
     <div>
     <div className="OurProduct">
-      <Typography variant="h4" pb={10}>What do we offer?</Typography>
+      <Typography variant="h4" pb={10} className="product-header">What do we offer?</Typography>
       <Grid container justifyContent="center" spacing={1}>
         <Grid item xs={12} sm={12} md={12}>
           <div data-aos="zoom-in-up" className="product-img">

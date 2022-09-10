@@ -9,15 +9,6 @@ import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
 
-
-
-
-
-
-
-
-
-
 function App() {
   return (
     <div className="App">
@@ -34,8 +25,6 @@ function App() {
           <Route path="event-date" element={<Calender />} />
         </Routes>
       </div>
-
-
     </div>
   );
 }

@@ -40,9 +40,9 @@ export default function Calender() {
     },
   ]);
 
-  function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent]);
-  }
+  // function handleAddEvent() {
+  //   setAllEvents([...allEvents, newEvent]);
+  // }
   return (
     <div className="calender">
       {/* <h1>Calendar</h1>
