@@ -1,0 +1,7 @@
+#root > div > footer > div > div.MuiBox-root.MuiBox-root-14 > p{
+    display: flex;
+    justify-content: center;
+}
+.phone-icon{
+    padding-right:10px
+}

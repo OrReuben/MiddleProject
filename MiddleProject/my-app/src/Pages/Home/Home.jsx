@@ -18,10 +18,12 @@ const Home = () => {
               fontWeight={900}
               letterSpacing={3}
               gutterBottom
+              className="main-header"
+
             >
               WELCOME
             </Typography>
-            <Typography variant="h5" fontWeight={800}>
+            <Typography variant="h5" fontWeight={800} className="par-header">
               Let's bring your dream to reality!
             </Typography>
           </div>
