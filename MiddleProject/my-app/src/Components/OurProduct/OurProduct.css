@@ -1,0 +1,20 @@
+.OurProduct{
+    margin:30% 0%;
+    padding:3% 0% 10% 0%;
+    border-radius: 20PX;
+    background-image:linear-gradient(to right, #4568DC, #B06AB3)
+
+}
+[data-aos^=zoom][data-aos^=zoom].aos-animate{
+    display: flex;
+    justify-content: center;
+    margin-bottom:10px;
+
+}
+[data-aos][data-aos][data-aos-easing=ease], body[data-aos-easing=ease] [data-aos]{
+    display: flex;
+    justify-content: center;
+}
+.imgMedia{
+    height:350px
+}

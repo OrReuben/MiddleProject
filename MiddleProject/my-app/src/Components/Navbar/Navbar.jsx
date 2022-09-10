@@ -64,9 +64,9 @@ const Navbar = () => {
               component="img"
               sx={{
                 width: "75px",
-                height: "75px",
+                height: "65px",
                 display: { xs: "none", md: "block" },
-                cursor:"pointer"
+                cursor:"pointer",
               }}
               alt="logo"
               src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
@@ -188,7 +188,7 @@ const Navbar = () => {
               variant="contained"
               disableElevation
               sx={{
-                my: 3,
+                my: 2,
                 color: "white",
                 display: "block",
                 mr: 3,

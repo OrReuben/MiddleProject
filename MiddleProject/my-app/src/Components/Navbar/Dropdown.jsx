@@ -64,12 +64,9 @@ export default function Dropdown() {
   };
 
   return (
-    <div>
+    <div style={{alignSelf:"center"}}>
       <Button
         style={{
-          paddingTop: "10%",
-          marginTop: "20%",
-          paddingBottom: "10%",
           borderRadius: "30px",
           color: "white",
         }}

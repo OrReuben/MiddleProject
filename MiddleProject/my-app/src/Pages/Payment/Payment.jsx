@@ -63,7 +63,7 @@ const Payment = () => {
   const dispatch = useDispatch();
   const Redirection = (values) => {
     dispatch(addCard(values));
-    navigate("/");
+    navigate("/event-date");
   };
   const classes = useStyle();
   return (

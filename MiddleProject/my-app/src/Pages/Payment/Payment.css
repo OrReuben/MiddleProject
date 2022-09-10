@@ -3,3 +3,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.MuiGrid-spacing-xs-1{
+  margin: -15px 0px !important;
+}
