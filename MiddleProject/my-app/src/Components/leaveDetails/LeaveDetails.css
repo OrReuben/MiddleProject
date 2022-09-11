@@ -1,18 +1,125 @@
-.LeaveDetailsForm{
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    background-color: rgba(29, 180, 180, 0.731);
+.LeaveDetailsForm {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: rgba(29, 180, 180, 0);
 }
-.LeaveDetailsSection{
-    display: flex;
-    -webkit-text-stroke-color: #3aa1e0;
-    font-size: 90px;
-    font-weight: 700;
-    color: rgb(0, 198, 205);
-    text-align: left;
-    font-family: gilroy,sans-serif;
-    margin: 0;
-    box-sizing: inherit;
+.LeaveDetailsSection {
+  background-image: linear-gradient(to bottom, white, #e57373);
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+.css-1lhue4c-MuiPaper-root-MuiGrid-root {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0),
+    0px 0px 0px 0px rgba(0, 0, 0, 0) !important;
+}
+#root
+  > div
+  > div
+  > div
+  > div.LeaveDetailsSection.MuiBox-root.css-1h12qnz
+  > main
+  > div
+  > div.buttomC
+  > div:nth-child(2)
+  > h1 {
+  padding-top: 9%;
+  -webkit-text-stroke: 1px black;
+}
 
+.cf7-main-title {
+  margin-bottom: 26px;
+}
+.text {
+  color: #0a0018;
+}
+.auto {
+  margin: auto;
+}
+.l-1 {
+  z-index: 10;
+}
+.line-2h5 {
+  line-height: 2.5;
+}
+.font-22 {
+  font-size: 22px;
+}
+.space-55 {
+  letter-spacing: 0.55px;
+}
+.fit {
+  width: fit-content;
+  padding-right: 17vw;
+}
+.ltr {
+  direction: ltr;
+}
+.bolder {
+  font-weight: 800;
+}
+.gilroy {
+  font-family: gilroy, sans-serif;
+}
+.pos-rel {
+  position: relative;
+}
+.allC {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttomC {
+  display: flex;
+  justify-content: space-around;
+}
+
+.AboutMe {
+  display: flex;
+}
+.abutMeD {
+  display: flex;
+}
+.cf-contact {
+  margin-top: 77px;
+  padding-bottom: 108px;
+  max-width: 510px;
+}
+.sblack {
+  color: #111;
+}
+.narkiss {
+  font-family: narkissblock, sans-serif;
+}
+.rtl {
+  direction: rtl;
+}
+#contact-header {
+  z-index: 3 !important;
+  padding: 0;
+}
+
+@media only screen and (max-width: 730px) {
+  #root
+    > div
+    > div
+    > div
+    > div.LeaveDetailsSection.MuiBox-root.css-1h12qnz
+    > main
+    > div
+    > div.buttomC
+    > div:nth-child(2)
+    > h1 {
+    display: none;
+  }
+  .contact-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .buttomC {
+    display: flex;
+    justify-content: center;
+  }
 }

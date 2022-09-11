@@ -9,25 +9,8 @@ import Box from "@mui/material/Box";
 
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 import "./Mission.css";
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
-const cards = [1, 2, 3];
-
-const theme = createTheme();
 
 export default function Mission() {
   return (
@@ -67,9 +50,11 @@ export default function Mission() {
             color="text.secondary"
             paragraph
           >
-            Something short and leading about the collection below—its contents,
-            the creator, etc. Make it short and sweet, but not too short so
-            folks don&apos;t simply skip over it entirely.
+            We fulfill dreams and execute weddings in nature in a special way.
+            With lots of thought and love for our work, we create weddings
+            against the backdrop of natural scenery – the trees, vegetation, sea
+            or desert of our beautiful country. Weddings in the family yard or
+            even boutique weddings in unusual homes or other rare places.
           </Typography>
           <Stack
             sx={{ pt: 4 }}

@@ -12,3 +12,12 @@
     flex-direction: column;
     padding:15px
 } 
+/* .header{
+    transition: .3s ease-in;
+    overflow:hidden;
+    background-color: rgba(0,0,0,0) !important;
+
+}
+.headerbg{
+    background-color:#e57373
+} */

@@ -8,7 +8,12 @@ import Pricing from "./Components/Pricing/Pricing";
 import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
+import OurProduct from "./Components/OurProduct/OurProduct";
+import InfoCard from "./Components/card-info/infoCard";
+import Reviews from "./Components/Reviews/Reviews";
+import LeaveDetails from "./Components/leaveDetails/LeaveDetails";
 import Footer from "./Components/Footer/Footer";
+import InfintyText from "./Components/infinty-text/infintyText";
 
 function App() {
   return (

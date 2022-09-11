@@ -10,10 +10,10 @@ import { useEffect } from "react";
 export default function Reviews(prpos) {
    
   return (
-    <Card sx={{ width: 1 }}>
+    <Card sx={{ width: 800 }}>
       <CardMedia
         component="img"
-        height="450"
+        height="500"
         image={prpos.image}
         alt="green iguana"
       />

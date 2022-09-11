@@ -15,9 +15,8 @@ export default function Footer() {
     <footer>
       <Box
         px={{ xs: 3, sm: 10, md: 10, lg: 10 }}
-        py={{ xs: 5, sm: 6, md: 6, lg: 6 }}
-        mt={2}
-        bgcolor="text.primary"
+        py={{ xs: 3, sm: 3, md: 3, lg: 3 }}
+        bgcolor="#e57373"
         color="white"
       >
         <Container maxWidth="lg">
@@ -73,7 +72,7 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Container>
-        <Box textAlign="center" pt={{ xs: 5, sm: 10, md: 10, lg: 10 }}>
+        <Box textAlign="center" pt={{ xs: 2, sm: 2, md: 2, lg: 2 }}>
          <Link href="/" color="inherit" style={{ textDecoration: 'none'}}> <span style={{ marginRight: 5}}>
             {" "}
             <InstagramIcon />{" "}

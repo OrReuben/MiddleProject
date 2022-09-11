@@ -11,24 +11,37 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import Dropdown from "../Navbar/Dropdown";
+import { useState } from "react";
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
+  const location = useLocation();
+
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
   const settings = [
     "Register",
     `Welcome ${username[username.length - 1].username}`,
+    "Events"
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
   const navigateHome = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -38,16 +51,15 @@ const Navbar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-    navigate('/about')
+    navigate("/about");
   };
   const handleCloseNavMenu1 = () => {
     setAnchorElNav(null);
-    navigate('/pricing')
+    navigate("/pricing");
   };
   const handleCloseNavMenu2 = () => {
     setAnchorElNav(null);
-    navigate('/reviews')
-
+    navigate("/reviews");
   };
 
   const handleCloseUserMenu = () => {
@@ -55,25 +67,28 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      style={{ boxShadow: "none" }}
+      // className={
+      //   location.pathname === "/" && color === true ? "header headerbg" : "header"
+      // }
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
-            {" "}
-            <Box
-              component="img"
-              sx={{
-                width: "75px",
-                height: "65px",
-                display: { xs: "none", md: "block" },
-                cursor:"pointer",
-              }}
-              alt="logo"
-              src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
-              onClick={navigateHome}
-            />
-          
-
+          {" "}
+          <Box
+            component="img"
+            sx={{
+              width: "75px",
+              height: "65px",
+              display: { xs: "none", md: "block" },
+              cursor: "pointer",
+            }}
+            alt="logo"
+            src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+            onClick={navigateHome}
+          />
           <Box
             sx={{
               flexGrow: 1,
@@ -136,20 +151,19 @@ const Navbar = () => {
                 <Dropdown />
               </Box>
             </Menu>
-          </Box>
-            {" "}
-            <Box
-              component="img"
-              sx={{
-                width: "75px",
-                height: "75px",
-                display: { xs: "block", md: "none" },
-                cursor:"pointer"
-              }}
-              alt="logo"
-              src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
-              onClick={navigateHome}
-            />
+          </Box>{" "}
+          <Box
+            component="img"
+            sx={{
+              width: "75px",
+              height: "75px",
+              display: { xs: "block", md: "none" },
+              cursor: "pointer",
+            }}
+            alt="logo"
+            src="https://www.havaveadam.co.il/wp-content/uploads/2018/05/logo_header.png.webp"
+            onClick={navigateHome}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -169,7 +183,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
-              variant="contained"
+              variant="string"
               disableElevation
               sx={{
                 my: 2,
@@ -185,7 +199,7 @@ const Navbar = () => {
             </Button>
             <Button
               onClick={handleCloseNavMenu1}
-              variant="contained"
+              variant="string"
               disableElevation
               sx={{
                 my: 2,
@@ -201,7 +215,7 @@ const Navbar = () => {
             </Button>
             <Button
               onClick={handleCloseNavMenu2}
-              variant="contained"
+              variant="string"
               disableElevation
               sx={{
                 my: 2,
@@ -217,11 +231,13 @@ const Navbar = () => {
             </Button>
             <Dropdown />
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={username[username.length - 1].url} />
+                <Avatar
+                  alt="Remy Sharp"
+                  src={username[username.length - 1].url}
+                />
               </IconButton>
             </Tooltip>
             <Menu
@@ -240,9 +256,12 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {settings.map((setting, index) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" onClick={() => navigate('/register')}>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => index === 0 ? navigate('/register') : index === 1 ? navigate('/') : navigate('/event-date')}
+                  >
                     {setting}
                   </Typography>
                 </MenuItem>
