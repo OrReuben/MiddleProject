@@ -6,25 +6,26 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useEffect } from "react";
+import "./Reviews.css"
 
 export default function Reviews(prpos) {
    
   return (
-    <Card sx={{ width: 800 }}>
-      <CardMedia
-        component="img"
-        height="800"
-        image={prpos.image}
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-            {prpos.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-            {prpos.discripion}
-        </Typography>
-      </CardContent>
-    </Card>
+    <Card sx={{ width: 600 ,height:480}}>
+    <CardMedia
+      component="img"
+      height="280"
+      image={prpos.image}
+      alt="green iguana"
+    />
+    <CardContent sx={{height: 200}}>
+      <Typography gutterBottom variant="h6" component="div">
+          {prpos.name}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+          {prpos.discripion}
+      </Typography>
+    </CardContent>
+  </Card>
   );
 }
