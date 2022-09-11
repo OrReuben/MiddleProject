@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./Payment.css";
 import React from "react";
@@ -18,6 +17,7 @@ import { TextField } from "formik-material-ui";
 import { addCard } from "../../Store/InputSlice";
 import { useSelector } from "react-redux";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const useStyle = makeStyles((theme) => ({
   padding: {
@@ -63,7 +63,7 @@ const Payment = () => {
   const dispatch = useDispatch();
   const Redirection = (values) => {
     dispatch(addCard(values));
-    navigate("/");
+    navigate('/event-date')
   };
   const classes = useStyle();
   return (
