@@ -1,4 +1,5 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import { cleanup } from "@testing-library/react";
 import { useEffect, useState } from "react";
 import Reviews from "./Reviews";
@@ -6,7 +7,7 @@ import "./Reviews.css"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 function BtmReviews() {
-  const [counter,setCounter]=useState(0);
+  const [counter,setCounter]=useState(1);
   const reviewsStr=[
     {name:"עינב ועופרי", discripion:"נדב היקר וכל צוות חוה ואדם! התחתנו ב16.6.16 בחתונת טבע במושב תלמי אלעזר. אנחנו רוצים לפרגן ולומר המון המון תודה על אירוע מ-ו-ש-ל-ם שחלק משמעותי מאוד ממנו הוא בזכותכם. תודה רבה על שירות אדיב, מענה אנושי ומקצועיות שאין כמותה! זכינו לעבור את החוויה הזאת- של להפיק חתונה, עם אנשי מקצוע שהם קודם כל בני אדם מדהימים וכמובן כמובן, אנשי מקצוע ברמה הגבוהה ביותר. אנחנו מקבלים המון תגובות חיוביות על כל היופי, האושר והכיף שהיה באירוע אבל יותר חשוב מזה- אנחנו מרוצים מעל לכל ציפיה. הרבה תודה על הכל ובין היתר- על הגרילנדות שהרימו את המקום, על הבר המשוגע-  שלא מפסיק לגרוף מחמאות ושאלות וכמובן על כל הטוב שהוספתם לחוויה כולה. אז לכל מי שהגיע לכאן וקורא את חוות הדעת הזאת- פשוט אל תחשבו פעמיים. מומלץ בחום רב!!! עינת ועפרי :) ",image:"https://www.havaveadam.co.il/wp-content/uploads/2016/06/K6A2328.jpg.webp"},
     {name:"גליה וטל",discripion:"אחת ההחלטות הטובות ביותר בארגון החתונה שלנו היה לבחור בנדב וחוה ואדם.. הכל התנהל ברוגע, בכיף ובמקצועיות בלתי מתפשרת, נדב דאג שהכל יהיה כמו שאנחנו רוצים ואוהבים, והחתונה הייתה פשוט מושלמת! הכל תיקתק ואנחנו נהננו בטירוף! תודה רבה רבה!",image:"https://www.havaveadam.co.il/wp-content/uploads/2016/07/86-3.jpg.webp"},
@@ -26,16 +27,16 @@ function BtmReviews() {
   
   function navigetinReviews(whatClicked){
     if(whatClicked==1){
-      if(counter!==0)
+      if(counter!==1)
       setCounter(counter-1)
       else
-      setCounter(reviewsStr.length-1)
+      setCounter(reviewsStr.length-2)
     }
     if(whatClicked==2){
-      if(counter!==reviewsStr.length-1)
+      if(counter!==reviewsStr.length-2)
       setCounter(counter+1)
       else
-      setCounter(0)
+      setCounter(1)
     }
     
   }
@@ -45,9 +46,23 @@ function BtmReviews() {
   return (
     <div className="Home">
         <div className="comlete">
-        <Button  onClick={()=>{navigetinReviews(1)}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></Button>
-       <Reviews name={reviewsStr[counter].name} discripion={reviewsStr[counter].discripion} image={reviewsStr[counter].image} counter={counter} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
-       <Button  onClick={()=>{navigetinReviews(2)}}><ArrowForwardIosIcon></ArrowForwardIosIcon></Button>
+          
+          <Button  onClick={()=>{navigetinReviews(1)}}><ArrowBackIosNewIcon></ArrowBackIosNewIcon></Button>
+          <Grid container spacing={{ xs: 2, md: 2}}>
+          <Grid item sm={12} md={6} lg={4}>
+          <Reviews name={reviewsStr[counter-1].name} discripion={reviewsStr[counter-1].discripion} image={reviewsStr[counter-1].image} counter={counter-1} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
+          </Grid>
+          <Grid item sm={12} md={6} lg={4}>
+          <Reviews name={reviewsStr[counter].name} discripion={reviewsStr[counter].discripion} image={reviewsStr[counter].image} counter={counter} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
+          </Grid>
+          <Grid item sm={12} md={12} lg={4} display="flex" justifyContent={"center"}>
+          <Reviews name={reviewsStr[counter+1].name} discripion={reviewsStr[counter+1].discripion} image={reviewsStr[counter+1].image} counter={counter+1} setCounter={setCounter} nav={navigetinReviews} reviewsStrb={reviewsStr.length-1}/>
+          </Grid>
+          </Grid>
+          <Button  onClick={()=>{navigetinReviews(2)}}><ArrowForwardIosIcon></ArrowForwardIosIcon></Button>
+          
+          
+         
         </div>
       </div>
     );

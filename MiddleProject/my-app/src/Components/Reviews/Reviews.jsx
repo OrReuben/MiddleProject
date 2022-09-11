@@ -11,7 +11,7 @@ import "./Reviews.css"
 export default function Reviews(prpos) {
    
   return (
-    <Card sx={{ width: 600 ,height:480}}>
+    <Card sx={{ width: 410 ,height:480}}>
     <CardMedia
       component="img"
       height="280"
@@ -22,6 +22,7 @@ export default function Reviews(prpos) {
       <Typography gutterBottom variant="h6" component="div">
           {prpos.name}
       </Typography>
+      
       <Typography variant="body2" color="text.secondary">
           {prpos.discripion}
       </Typography>
