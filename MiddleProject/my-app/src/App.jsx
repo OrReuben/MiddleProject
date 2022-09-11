@@ -23,6 +23,7 @@ import LeaveDetails from './Components/leaveDetails/LeaveDetails'
 
 
 import InfintyText from "./Components/infinty-text/infintyText";
+import Svg from "./Components/svg/svg";
 
 
 function App() {
