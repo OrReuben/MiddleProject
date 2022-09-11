@@ -1,8 +1,10 @@
 
-
 import React from 'react'
 import videoBg from './VideoBg.mp4'
 import './Home.css'
+import Mission from '../../Components/Mission/Mission'
+import OurProduct from '../../Components/OurProduct/OurProduct'
+import InfoCard from '../../Components/card-info/infoCard'
 
 const Home = () => {
   return (
@@ -20,6 +22,7 @@ const Home = () => {
 
       </div>
         {/* <Mission /> */}
+        
 
 
 
