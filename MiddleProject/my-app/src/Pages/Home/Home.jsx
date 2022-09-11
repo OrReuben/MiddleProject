@@ -17,7 +17,6 @@ const Home = () => {
   return (
     <div>
       <div className="Home">
-  
         <div className="overlay"></div>
         <video src={videoBg} autoPlay loop muted />
         <div className="content">
@@ -28,11 +27,15 @@ const Home = () => {
               fontWeight={600}
               gutterBottom
               className="main-header"
-                
             >
               WELCOME
             </Typography>
-            <Typography variant="h5" fontWeight={600} letterSpacing={2}    className="par-header">
+            <Typography
+              variant="h5"
+              fontWeight={600}
+              letterSpacing={2}
+              className="par-header"
+            >
               Let's bring your dream to reality!
             </Typography>
           </div>
@@ -61,10 +64,9 @@ const Home = () => {
         <About />
         <InfintyText />
         <OurProduct />
-
       </div>
-     {/* <span> <BtmReviews /></span> */}
-       <LeaveDetails /> 
+      <span> <BtmReviews /> </span>
+      <LeaveDetails />
       <div id="card"></div>
     </div>
   );

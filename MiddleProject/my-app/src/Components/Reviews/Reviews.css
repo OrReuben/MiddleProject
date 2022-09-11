@@ -1,5 +1,6 @@
 .comlete{
     display: flex;
+    padding-bottom: 10%;
 }
 .MuiButtonBase-root{
     position: absolute;
@@ -13,4 +14,23 @@
     line-height: 1.43;
     letter-spacing: 0.01071em;
     color: rgba(0, 0, 0, 0.6);
+}
+#root > div > div > div > span > div > div > div > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+#root > div > div > div > span > div > div > div > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    #root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-sm-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-4.one-off.css-cqpc6j-MuiGrid-root{
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px){
+    #root > div > div > div > span > div > div > div > div:nth-child(2) > div{
+        display: none;
+    }
 }
