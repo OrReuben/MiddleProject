@@ -17,7 +17,7 @@ export default function Footer() {
         px={{ xs: 3, sm: 10, md: 10, lg: 10 }}
         py={{ xs: 5, sm: 6, md: 6, lg: 6 }}
         mt={2}
-        bgcolor="text.secondary"
+        bgcolor="text.primary"
         color="white"
       >
         <Container maxWidth="lg">
