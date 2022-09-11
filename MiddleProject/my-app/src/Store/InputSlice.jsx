@@ -16,7 +16,7 @@ export const InputSlice = createSlice({
     ],
     cardObj: [
       {
-        date: "07/09/2022",
+        date: "",
         cardName: "",
         cardNumber: "",
         expDate: "",

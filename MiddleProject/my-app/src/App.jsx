@@ -10,7 +10,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
 import OurProduct from "./Components/OurProduct/OurProduct";
 import InfoCard from "./Components/card-info/infoCard";
-<<<<<<< HEAD
+
 import Reviews from "./Components/Reviews/Reviews";
 import LeaveDetails from './Components/leaveDetails/LeaveDetails'
 
@@ -21,9 +21,9 @@ import LeaveDetails from './Components/leaveDetails/LeaveDetails'
 
 
 
-=======
+
 import InfintyText from "./Components/infinty-text/infintyText";
->>>>>>> infintyText
+
 
 function App() {
   return (
@@ -41,14 +41,9 @@ function App() {
           <Route path="event-date" element={<Calender />} />
         </Routes>
       </div>
-<<<<<<< HEAD
- <OurProduct/>
-<InfoCard/>
-<LeaveDetails></LeaveDetails>
-=======
-      {/* <OurProduct/> */}
-    <InfintyText/>
->>>>>>> infintyText
+
+
+
 
     </div>
   );

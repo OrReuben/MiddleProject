@@ -2,3 +2,10 @@
 .rbc-day-slot .rbc-background-event {
   background-color: #e57373;
 }
+.calender{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10%;
+}
