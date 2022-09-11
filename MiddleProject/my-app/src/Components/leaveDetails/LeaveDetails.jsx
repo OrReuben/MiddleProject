@@ -6,14 +6,12 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import "./LeaveDetails.css";
 
-const theme = createTheme();
 const options = [
   { label: "Wedding", value: "Wedding" },
   { label: "Bar mizva", value: "Bar mizva" },
@@ -27,7 +25,6 @@ export default function SignInSide() {
       borderBottom={1}
       sx={{ borderColor: "white" }}
     >
-      <ThemeProvider theme={theme}>
         <Grid container component="main" sx={{ height: "40vh", width: "60vw" }}>
           <div className="allC">
             <div
@@ -162,7 +159,6 @@ export default function SignInSide() {
             </div>
           </div>
         </Grid>
-      </ThemeProvider>
     </Box>
   );
 }

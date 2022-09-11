@@ -39,38 +39,38 @@ function Copyright(props) {
 
 const tiers = [
   {
-    title: "Free",
-    price: "0",
+    title: "Wedding In Nature",
+    price: "40,000",
     description: [
-      "10 users included",
-      "2 GB of storage",
-      "Help center access",
-      "Email support",
+      "Get closer to one another.",
+      "Best in every celebration",
+      "Charming vineyard",
+      "Unique atmosphere",
     ],
     buttonText: "Get started",
     buttonVariant: "outlined",
   },
   {
-    title: "Pro",
+    title: "Wedding at sea",
     subheader: "Most popular",
-    price: "15",
+    price: "100,000",
     description: [
-      "20 users included",
-      "10 GB of storage",
-      "Help center access",
-      "Priority email support",
+      "Endless energies",
+      "A tickling sand sensation",
+      "Light breeze caressing and waves",
+      "Amazing bar with a variety",
     ],
     buttonText: "Get started",
     buttonVariant: "contained",
   },
   {
-    title: "Enterprise",
-    price: "30",
+    title: "Hava NAGILA",
+    price: "35,000",
     description: [
-      "50 users included",
-      "30 GB of storage",
-      "Help center access",
-      "Phone & email support",
+      "Bar service",
+      "Photo booth",
+      "Public singing",
+      "Unique souveniers",
     ],
     buttonText: "Get started",
     buttonVariant: "outlined",
@@ -78,8 +78,8 @@ const tiers = [
 ];
 
 export default function Pricing() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const priceList = tiers.map((tier) => tier.price);
   return (
     <div
@@ -109,9 +109,9 @@ export default function Pricing() {
           color="text.secondary"
           component="p"
         >
-          Quickly build an effective pricing table for your potential customers
-          with this layout. It&apos;s built with default MUI components with
-          little customization.
+          We will be happy to have a look at the yard and the house and to plan
+          the production in the best and most thorough manner possible, so that
+          on the special day all you have to do is enjoy the celebrations.
         </Typography>
       </Container>
       <Container maxWidth="md" component="main">
@@ -120,7 +120,7 @@ export default function Pricing() {
             <Grid item xs={12} sm={tier.title === "Enterprise" ? 12 : 6} md={4}>
               <Card>
                 <CardHeader
-                key={index}
+                  key={index}
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}
@@ -149,7 +149,7 @@ export default function Pricing() {
                       variant="h3"
                       color="text.primary"
                     >
-                      ${tier.price}
+                     ₪{tier.price}
                     </Typography>
                   </Box>
                   <ul>
@@ -166,13 +166,15 @@ export default function Pricing() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                 <Button
-                    onClick={() => {navigate('/payment') 
-                    dispatch(addPrice(priceList[index]))}}
+                  <Button
+                    onClick={() => {
+                      navigate("/payment");
+                      dispatch(addPrice(priceList[index]));
+                    }}
                     fullWidth
                     variant={tier.buttonVariant}
                   >
-                     {tier.buttonText}
+                    {tier.buttonText}
                   </Button>
                 </CardActions>
               </Card>

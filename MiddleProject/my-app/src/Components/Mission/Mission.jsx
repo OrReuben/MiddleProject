@@ -1,18 +1,15 @@
 import * as React from "react";
-
 import Button from "@mui/material/Button";
-
 import CssBaseline from "@mui/material/CssBaseline";
-
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-
 import "./Mission.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Mission() {
+  const navigate = useNavigate()
   return (
     <div>
       <CssBaseline />
@@ -62,7 +59,7 @@ export default function Mission() {
             spacing={2}
             justifyContent="center"
           >
-            <Button variant="contained" href="pricing">
+            <Button variant="contained" onClick={() => navigate('/pricing')} sx={{width:"30vw",padding:2, color:"white"}}> 
               Lets start
             </Button>
           </Stack>

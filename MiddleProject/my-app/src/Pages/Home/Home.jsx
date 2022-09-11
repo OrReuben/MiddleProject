@@ -1,22 +1,22 @@
 import React from "react";
 import "./Home.css";
 import OurProduct from "../../Components/OurProduct/OurProduct";
-import InfoCard from "../../Components/card-info/infoCard";
-import { createTheme, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import videoBg from "./VideoBg.mp4";
 import "./Home.css";
 import Mission from "../../Components/Mission/Mission";
-import Reviews from "../../Components/Reviews/Reviews";
 import BtmReviews from "../../Components/Reviews/BtmReviews";
 import LeaveDetails from "../../Components/leaveDetails/LeaveDetails";
-import About from "../About/About";
 import InfintyText from "../../Components/infinty-text/infintyText";
-import Navbar from "../../Components/Navbar/Navbar";
+import Svg from "../../Components/svg/svg";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="Home">
+      <div className="Home" id="Home">
         <div className="overlay"></div>
         <video src={videoBg} autoPlay loop muted />
         <div className="content">
@@ -61,12 +61,46 @@ const Home = () => {
         <Mission />
       </div>
       <div id="product">
-        <About />
+        <AboutUs
+          title="Hava Nagila"
+          par="For more than 30 years we have been producing events out of a
+      passion to do special things that have not yet been seen Huan
+      is able to reach any point where the couple dreams of having
+      their special day - in a private area, in the forest, in the
+      field or in the private garden. In a few minutes, the bar
+      opens in a chaotic style with various special objects from
+      time to time: an old radio, a gramophone, And special ..."
+          image={
+            "https://www.havaveadam.co.il/wp-content/uploads/2018/08/%D7%93%D7%A3-%D7%91%D7%99%D7%AA-3-e1548941719436.jpg.webp"
+          }
+        />
+        <Button
+          variant="contained"
+          onClick={() => navigate("/about")}
+          sx={{ width: "50vw", padding: 2, color: "white" }}
+        >
+          READ MORE
+        </Button>
         <InfintyText />
         <OurProduct />
       </div>
-      <span> <BtmReviews /> </span>
-      <LeaveDetails />
+      <hr />
+      <div className="svg-container">
+        <Svg />{" "}
+      </div>
+      <hr />
+      <span>
+        {" "}
+        <BtmReviews />{" "}
+      </span>
+      <Button
+        variant="contained"
+        onClick={() => navigate("/reviews")}
+        sx={{ width: "50vw", padding: 2, color: "white" }}
+      >
+        MORE REVIEWS
+      </Button>
+      <div id="contact"><LeaveDetails /></div>
       <div id="card"></div>
     </div>
   );

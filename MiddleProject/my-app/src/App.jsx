@@ -1,21 +1,17 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
 import Register from "./Pages/Register/Register";
 import Payment from "./Pages/Payment/Payment";
 import Pricing from "./Components/Pricing/Pricing";
 import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
-import OurProduct from "./Components/OurProduct/OurProduct";
-import InfoCard from "./Components/card-info/infoCard";
-<<<<<<< HEAD
-import Reviews from "./Components/Reviews/Reviews";
-import LeaveDetails from "./Components/leaveDetails/LeaveDetails";
 import Footer from "./Components/Footer/Footer";
-import InfintyText from "./Components/infinty-text/infintyText";
-import Svg from "./Components/svg/svg";
+import Reviews from "./Components/Reviews/Reviews";
+import About from "./Pages/About/About";
+
+
 
 
 function App() {
@@ -31,9 +27,12 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="event-date" element={<Calender />} />
+          <Route path="reviews" element={<Reviews />} />
+          
         </Routes>
       </div>
       <Footer />
+
     </div>
   );
 }

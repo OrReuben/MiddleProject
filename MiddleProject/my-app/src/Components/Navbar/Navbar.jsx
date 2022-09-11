@@ -11,26 +11,24 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../Navbar/Dropdown";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
-  const location = useLocation();
 
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 90) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
-  window.addEventListener("scroll", changeColor);
+  // const [color, setColor] = useState(false);
+  // const changeColor = () => {
+  //   if (window.scrollY >= 90) {
+  //     setColor(true);
+  //   } else {
+  //     setColor(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", changeColor);
   const settings = [
     "Register",
     `Welcome ${username[username.length - 1].username}`,

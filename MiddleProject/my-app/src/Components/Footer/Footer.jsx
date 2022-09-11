@@ -24,7 +24,7 @@ export default function Footer() {
             <Grid item xs={12} s={4} md={4} lg={4}>
               <Box borderBottom={1}>Help</Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="#contact" color="inherit">
                   Contact
                 </Link>
               </Box>
@@ -42,7 +42,7 @@ export default function Footer() {
             <Grid item xs={12} s={4} md={4} lg={4}>
               <Box borderBottom={1}>Account</Box>
               <Box>
-                <Link href="/" color="inherit">
+                <Link href="/register" color="inherit">
                   Register
                 </Link>
               </Box>
@@ -73,20 +73,20 @@ export default function Footer() {
           </Grid>
         </Container>
         <Box textAlign="center" pt={{ xs: 2, sm: 2, md: 2, lg: 2 }}>
-         <Link href="/" color="inherit" style={{ textDecoration: 'none'}}> <span style={{ marginRight: 5}}>
+         <Link href="https://Instagram.com" color="inherit" style={{ textDecoration: 'none'}}> <span style={{ marginRight: 5}}>
             {" "}
             <InstagramIcon />{" "}
           </span> </Link>
-         <Link href="/" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
+         <Link href="https://Twitter.com" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
             {" "}
             <TwitterIcon />{" "}
           </span> </Link>
          
-         <Link href="/" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
+         <Link href="https://Whatsapp.com" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
             {" "}
             <WhatsAppIcon />{" "}
           </span></Link>
-        <Link href="/" color="inherit" style={{ textDecoration: 'none' }}>  <span style={{ marginRight: 5 }}>
+        <Link href="https://Facebook.com" color="inherit" style={{ textDecoration: 'none' }}>  <span style={{ marginRight: 5 }}>
             {" "}
             <FacebookIcon />{" "}
           </span></Link>

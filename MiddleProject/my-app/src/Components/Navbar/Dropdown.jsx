@@ -91,23 +91,23 @@ export default function Dropdown() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <a href="#Home" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
             <HomeIcon />
           Welcome
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <CollectionsBookmarkIcon />
-          Photo Gallery
-        </MenuItem>
-        <Divider />
-        <MenuItem onClick={handleClose} disableRipple>
+        </MenuItem></a>
+        <a href="#mission" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
         <TaskIcon />
          Our Mission
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <InfoIcon />
+        </MenuItem></a>
+       <a href="#product" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
+          <CollectionsBookmarkIcon />
           About
-        </MenuItem>
+        </MenuItem></a>
+        <Divider />
+        <a href="#contact" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
+          <InfoIcon />
+          Contact
+        </MenuItem></a>
       </StyledMenu>
     </div>
   );

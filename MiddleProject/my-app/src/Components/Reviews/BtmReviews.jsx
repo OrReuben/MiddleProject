@@ -1,7 +1,6 @@
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { cleanup } from "@testing-library/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Reviews from "./Reviews";
 import "./Reviews.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -110,18 +109,18 @@ function BtmReviews() {
   ];
 
   function navigetinReviews(whatClicked) {
-    if (whatClicked == 1) {
+    if (whatClicked === 1) {
       if (counter !== 1) setCounter(counter - 1);
       else setCounter(reviewsStr.length - 2);
     }
-    if (whatClicked == 2) {
+    if (whatClicked === 2) {
       if (counter !== reviewsStr.length - 2) setCounter(counter + 1);
       else setCounter(1);
     }
   }
 
   return (
-    <div className="Home">
+    <div className="Home-reviews">
       <div className="comlete">
         <Button
           onClick={() => {
@@ -131,7 +130,7 @@ function BtmReviews() {
           <ArrowBackIosNewIcon></ArrowBackIosNewIcon>
         </Button>
         <Grid container columnSpacing={{ xs: 3, md: 3 }}>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
             <Reviews
               name={reviewsStr[counter - 1].name}
               discripion={reviewsStr[counter - 1].discripion}
@@ -156,6 +155,7 @@ function BtmReviews() {
           </Grid>
           <Grid
             item
+           
             sm={12}
             md={12}
             lg={4}

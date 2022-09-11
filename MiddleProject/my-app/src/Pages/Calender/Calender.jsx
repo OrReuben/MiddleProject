@@ -5,7 +5,7 @@ import startOfWeek from "date-fns/startOfWeek";
 import React, { useState } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Calender.css";
 import { useSelector } from "react-redux";
@@ -37,8 +37,8 @@ export default function Calender() {
 
  
 
-  const [Event, setEvent] = useState({ title: "", start: "", end: "" });
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  // const [Event, setEvent] = useState({ title: "", start: "", end: "" });
+  // const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState([
     {
       title: "event",
@@ -71,9 +71,9 @@ export default function Calender() {
     },
   ]);
 
-  function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent]);
-  }
+  // function handleAddEvent() {
+  //   setAllEvents([...allEvents, newEvent]);
+  // }
   return (
     <div>
       {/* <h1>Calendar</h1>

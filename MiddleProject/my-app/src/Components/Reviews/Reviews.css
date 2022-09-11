@@ -2,6 +2,10 @@
     display: flex;
     padding-bottom: 10%;
 }
+.Home-reviews{
+    height:80vh;
+    padding-top:10px
+}
 .MuiButtonBase-root{
     position: absolute;
     padding-top: 80vh;
@@ -33,4 +37,24 @@
     #root > div > div > div > span > div > div > div > div:nth-child(2) > div{
         display: none;
     }
+    #root > div > div > div > span > div > div > div > div:nth-child(1){
+        padding:0
+    }
+}
+@media only screen and (max-width: 500px){
+#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div{
+    width:90%
+}
+#root > div > div > div > span > div > div > button:nth-child(3){
+    margin:-15px
+}
+#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div > p{
+    font-size:0.55rem
+}
+#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div > div{
+    font-size: 1rem;
+}
+#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div{
+    padding:4px
+}
 }

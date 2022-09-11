@@ -141,7 +141,7 @@ const Payment = () => {
                         </Grid>
                       </Grid>
                     </CardContent>
-                    <Typography variant="h6">Subtotal to pay: ${itemPrice}</Typography>
+                    <Typography variant="h6">Subtotal to pay: {itemPrice}₪</Typography>
                     <CardActions>
                       <Button
                         disabled={!dirty || !isValid}

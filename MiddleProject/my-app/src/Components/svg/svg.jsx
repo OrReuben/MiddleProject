@@ -1,13 +1,14 @@
+import { Box } from "@mui/material";
 import "./svg.css";
 
-export default function vg() {
+export default function Svg() {
   return (
     <div>
+      <Box>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="500"
-        height="500"
         viewBox="0 0 500 500"
+        className="svg-logo"
       >
         <path
           class="monkey"
@@ -46,6 +47,7 @@ c-5.89-6.792-12.363-13.048-19.436-18.921c23.361-13.786,49.298-21.541,76.098-21.5
 S427.692,471.949,346.119,471.949z"
         />
       </svg>
+      </Box>
     </div>
   );
 }

@@ -14,16 +14,7 @@
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0),
     0px 0px 0px 0px rgba(0, 0, 0, 0) !important;
 }
-#root
-  > div
-  > div
-  > div
-  > div.LeaveDetailsSection.MuiBox-root.css-1h12qnz
-  > main
-  > div
-  > div.buttomC
-  > div:nth-child(2)
-  > h1 {
+#contact > div > main > div > div.buttomC > div:nth-child(2) > h1{
   padding-top: 9%;
   -webkit-text-stroke: 1px black;
 }
@@ -99,18 +90,12 @@
   z-index: 3 !important;
   padding: 0;
 }
-
+.css-1h12qnz{
+  padding-top:20px;
+  margin-top:50px
+}
 @media only screen and (max-width: 730px) {
-  #root
-    > div
-    > div
-    > div
-    > div.LeaveDetailsSection.MuiBox-root.css-1h12qnz
-    > main
-    > div
-    > div.buttomC
-    > div:nth-child(2)
-    > h1 {
+  #contact > div > main > div > div.buttomC > div:nth-child(2) > h1 {
     display: none;
   }
   .contact-button {
