@@ -1,11 +1,16 @@
 .comlete{
     display: flex;
-    align-content: center;
-    padding-right: 50%;
-    height: 80vh;
-
 }
 .MuiButtonBase-root{
     position: absolute;
     padding-top: 80vh;
+}
+.css-r40f8v-MuiTypography-root {
+    margin: 0;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 300 !important;
+    font-size: 0.75rem !important;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: rgba(0, 0, 0, 0.6);
 }
