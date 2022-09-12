@@ -11,7 +11,7 @@ export default function Svg() {
         className="svg-logo"
       >
         <path
-          class="monkey"
+          className="Ring"
           fill="#fff"
           stroke="red"
           d="M385.537,164.289l62.113-77.642c2.603-3.471,2.603-6.942,0.868-10.414l-34.712-52.068

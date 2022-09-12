@@ -15,24 +15,25 @@ import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../Navbar/Dropdown";
-// import { useState } from "react";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const username = useSelector((state) => state.input.objValue);
-
-  // const [color, setColor] = useState(false);
-  // const changeColor = () => {
-  //   if (window.scrollY >= 90) {
-  //     setColor(true);
-  //   } else {
-  //     setColor(false);
-  //   }
-  // };
-  // window.addEventListener("scroll", changeColor);
+  const location = useLocation();
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
   const settings = [
     "Register",
     `Welcome ${username[username.length - 1].username}`,
-    "Events"
+    "Events",
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -68,9 +69,11 @@ const Navbar = () => {
     <AppBar
       position="static"
       style={{ boxShadow: "none" }}
-      // className={
-      //   location.pathname === "/" && color === true ? "header headerbg" : "header"
-      // }
+      className={
+        location.pathname === "/" && color === true
+          ? "headerbg"
+          : location.pathname === "/" ? "header" : ""
+      }
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -99,7 +102,7 @@ const Navbar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="secondary"
             >
               <MenuIcon />
             </IconButton>
@@ -258,7 +261,13 @@ const Navbar = () => {
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography
                     textAlign="center"
-                    onClick={() => index === 0 ? navigate('/register') : index === 1 ? navigate('/') : navigate('/event-date')}
+                    onClick={() =>
+                      index === 0
+                        ? navigate("/register")
+                        : index === 1
+                        ? navigate("/")
+                        : navigate("/event-date")
+                    }
                   >
                     {setting}
                   </Typography>

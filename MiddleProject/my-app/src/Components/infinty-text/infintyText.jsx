@@ -2,24 +2,24 @@ import "./infintyText.css"
 
 export default function InfintyText() {
     return(
-        <div class="marquee">
+        <div className="marquee">
       <h3>
-        <div class="marquee-wrapper">
-          <div class="marquee-title">
-            / We think <span class="text-stroke-black"> creative </span>
+        <div className="marquee-wrapper">
+          <div className="marquee-title">
+            / We think <span className="text-stroke-black"> creative </span>
             &amp; make them 
-            <span class="text-stroke-black"> easy</span> / We think
-            <span class="text-stroke-black"> creative </span>
+            <span className="text-stroke-black"> easy</span> / We think
+            <span className="text-stroke-black"> creative </span>
             &amp; make them
-            <span class="text-stroke-black"> easy</span>
+            <span className="text-stroke-black"> easy</span>
           </div>
-          <div class="marquee-title">
-            / We think <span class="text-stroke-black"> creative </span>
+          <div className="marquee-title">
+            / We think <span className="text-stroke-black"> creative </span>
             &amp; make them 
-            <span class="text-stroke-black"> easy</span> / We think
-            <span class="text-stroke-black"> creative </span>
+            <span className="text-stroke-black"> easy</span> / We think
+            <span className="text-stroke-black"> creative </span>
             &amp; make them 
-            <span class="text-stroke-black"> easy</span>
+            <span className="text-stroke-black"> easy</span>
           </div>
         </div>
       </h3>

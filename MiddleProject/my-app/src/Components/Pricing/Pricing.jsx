@@ -117,10 +117,10 @@ export default function Pricing() {
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map((tier, index) => (
-            <Grid item xs={12} sm={tier.title === "Enterprise" ? 12 : 6} md={4}>
+            <Grid item xs={12} sm={tier.title === "Enterprise" ? 12 : 6} md={4} key={index}>
               <Card>
                 <CardHeader
-                  key={index}
+                  
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}

@@ -1,27 +1,25 @@
-#root > div > header{
-    position:fixed;
-    z-index: 4;
+#root > div > header {
+  position: fixed;
+  z-index: 4;
 }
-.css-1t6c9ts{
-    justify-content: center;
+.css-1t6c9ts {
+  justify-content: center;
 }
-#root > div > header > div > div > div.MuiBox-root.css-16pm72g{
-    justify-content: left;
+#root > div > header > div > div > div.MuiBox-root.css-16pm72g {
+  justify-content: left;
 }
-#menu-appbar > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper > ul > div{
-    flex-direction: column;
-    padding:15px
-} 
-/* .header{
-    transition: .3s ease-in;
-    overflow:hidden;
-    background-color: rgba(0,0,0,0) !important;
-
-img{
-    margin: 3px 0px;
-    height:75px;
-    width:75px;
+#menu-appbar
+  > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper
+  > ul
+  > div {
+  flex-direction: column;
+  padding: 15px;
 }
-.headerbg{
-    background-color:#e57373
-} */
+.header {
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.headerbg {
+  background-color: #e57373;
+}

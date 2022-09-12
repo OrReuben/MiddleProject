@@ -12,12 +12,6 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import "./LeaveDetails.css";
 
-const options = [
-  { label: "Wedding", value: "Wedding" },
-  { label: "Bar mizva", value: "Bar mizva" },
-  { label: "Bat mizva", value: "Bat mizva" },
-  { label: "Else", value: "Else" },
-];
 export default function SignInSide() {
   return (
     <Box
@@ -98,12 +92,11 @@ export default function SignInSide() {
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         label="Event"
+                        defaultValue=""
                       >
-                        {options.map((item) => (
-                          <MenuItem key={item.value} value={item.value}>
-                            {item.label}
-                          </MenuItem>
-                        ))}
+                         <MenuItem value={"Wedding"}>Wedding</MenuItem>
+                        <MenuItem value={"Bar"}>Bar</MenuItem>
+                        <MenuItem value={"Else"}>Else</MenuItem>
                       </Select>
                     </FormControl>
                     <TextField

@@ -17,7 +17,7 @@ export default function AboutUsReverse() {
     <div className="about">
       <CssBaseline />
       <Grid container>
-        <Grid xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
           <div data-aos="zoom-in-up">
             <CardMedia
               className="imgMedia"
@@ -27,7 +27,7 @@ export default function AboutUsReverse() {
             />
           </div>
         </Grid>
-        <Grid xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <div data-aos="fade-right">
             <Box
               sx={{

@@ -4,10 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import "./Reviews.css"
+import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
 
 export default function Reviews(props) {
    
   return (
+    <div>
     <Card sx={{ width: 410 ,height:480}}>
     <CardMedia
       component="img"
@@ -25,5 +27,7 @@ export default function Reviews(props) {
       </Typography>
     </CardContent>
   </Card>
+
+  </div>
   );
 }
