@@ -11,7 +11,6 @@ import StarIcon from "@mui/icons-material/StarBorder";
 import { addPrice } from "../../Store/InputSlice";
 import { useDispatch } from "react-redux";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
@@ -26,14 +25,7 @@ function Copyright(props) {
       {...props}
       paddingBottom="10px"
       paddingTop="45px"
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
+    ></Typography>
   );
 }
 
@@ -117,10 +109,15 @@ export default function Pricing() {
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map((tier, index) => (
-            <Grid item xs={12} sm={tier.title === "Enterprise" ? 12 : 6} md={4} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={tier.title === "Enterprise" ? 12 : 6}
+              md={4}
+              key={index}
+            >
               <Card>
                 <CardHeader
-                  
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}
@@ -149,7 +146,7 @@ export default function Pricing() {
                       variant="h3"
                       color="text.primary"
                     >
-                     ₪{tier.price}
+                      ₪{tier.price}
                     </Typography>
                   </Box>
                   <ul>

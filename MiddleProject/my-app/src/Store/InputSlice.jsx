@@ -6,7 +6,7 @@ export const InputSlice = createSlice({
     objValue: [
       {
         username: "User",
-        url: "/static/images/avatar/2.jpg",
+        url: "https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png",
         following: "",
         phoneNumber: "",
         pswRepeat: "",
@@ -23,7 +23,7 @@ export const InputSlice = createSlice({
         cvv: "",
       },
     ],
-    price: ""
+    price: "",
   },
   reducers: {
     addData: (state, action) => {
@@ -34,8 +34,8 @@ export const InputSlice = createSlice({
       console.log(state.cardObj);
     },
     addPrice: (state, action) => {
-      state.price = action.payload
-    }
+      state.price = action.payload;
+    },
   },
 });
 export const { addData, addCard, addPrice } = InputSlice.actions;

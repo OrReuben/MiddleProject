@@ -77,7 +77,7 @@ const Home = () => {
         <Button
           variant="contained"
           onClick={() => navigate("/about")}
-          sx={{ width: "50vw", padding: 2, color: "white" }}
+          sx={{ width: "30vw", padding: 2, color: "white" }}
         >
           READ MORE
         </Button>
@@ -95,12 +95,14 @@ const Home = () => {
       </span>
       <Button
         variant="contained"
-        onClick={() => navigate("/reviews")}
-        sx={{ width: "50vw", padding: 2, color: "white" }}
+        onClick={() => navigate("/photo-album")}
+        sx={{ width: "30vw", padding: 2, color: "white" }}
       >
-        MORE REVIEWS
+        MORE
       </Button>
-      <div id="contact"><LeaveDetails /></div>
+      <div id="contact">
+        <LeaveDetails />
+      </div>
       <div id="card"></div>
     </div>
   );

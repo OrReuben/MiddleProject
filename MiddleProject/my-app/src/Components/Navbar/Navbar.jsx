@@ -32,7 +32,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeColor);
   const settings = [
     "Register",
-    `Welcome ${username[username.length - 1].username}`,
+    `Welcome ${username[username.length - 1].username}!`,
     "Events",
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -58,7 +58,7 @@ const Navbar = () => {
   };
   const handleCloseNavMenu2 = () => {
     setAnchorElNav(null);
-    navigate("/reviews");
+    navigate("/photo-album");
   };
 
   const handleCloseUserMenu = () => {
@@ -72,7 +72,9 @@ const Navbar = () => {
       className={
         location.pathname === "/" && color === true
           ? "headerbg"
-          : location.pathname === "/" ? "header" : ""
+          : location.pathname === "/"
+          ? "header"
+          : ""
       }
     >
       <Container maxWidth="xl">
@@ -147,9 +149,9 @@ const Navbar = () => {
                   disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
                 >
-                  <Typography>reviews</Typography>
+                  <Typography>Album</Typography>
                 </Button>
-                <Dropdown />
+                {location.pathname === "/" && <Dropdown />}
               </Box>
             </Menu>
           </Box>{" "}
@@ -228,9 +230,9 @@ const Navbar = () => {
                 borderRadius: 5,
               }}
             >
-              <Typography className="navbar-button">reviews</Typography>
+              <Typography className="navbar-button">Album</Typography>
             </Button>
-            <Dropdown />
+            {location.pathname === "/" && <Dropdown />}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

@@ -3,12 +3,13 @@ import { styled, alpha } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from "@mui/icons-material/Home";
 import Divider from "@mui/material/Divider";
-import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
-import TaskIcon from '@mui/icons-material/Task';
-import InfoIcon from '@mui/icons-material/Info';
+import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
+import TaskIcon from "@mui/icons-material/Task";
+import InfoIcon from "@mui/icons-material/Info";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import "./Dropdown.css";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -64,12 +65,12 @@ export default function Dropdown() {
   };
 
   return (
-    <div style={{alignSelf:"center"}}>
+    <div style={{ alignSelf: "center" }}>
       <Button
         style={{
           borderRadius: "30px",
-          color:"white",
-          backgroundColor:"#e57373"
+          color: "white",
+          backgroundColor: "#e57373",
         }}
         id="demo-customized-button"
         aria-controls={open ? "demo-customized-menu" : undefined}
@@ -91,23 +92,35 @@ export default function Dropdown() {
         open={open}
         onClose={handleClose}
       >
-        <a href="#Home" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
+        <a href="#Home" style={{ color: "black", textDecoration: "none" }}>
+          {" "}
+          <MenuItem onClick={handleClose} disableRipple>
             <HomeIcon />
-          Welcome
-        </MenuItem></a>
-        <a href="#mission" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
-        <TaskIcon />
-         Our Mission
-        </MenuItem></a>
-       <a href="#product" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
-          <CollectionsBookmarkIcon />
-          About
-        </MenuItem></a>
+            Welcome
+          </MenuItem>
+        </a>
+        <a href="#mission" style={{ color: "black", textDecoration: "none" }}>
+          {" "}
+          <MenuItem onClick={handleClose} disableRipple>
+            <TaskIcon />
+            Our Mission
+          </MenuItem>
+        </a>
+        <a href="#product" style={{ color: "black", textDecoration: "none" }}>
+          {" "}
+          <MenuItem onClick={handleClose} disableRipple>
+            <CollectionsBookmarkIcon />
+            About
+          </MenuItem>
+        </a>
         <Divider />
-        <a href="#contact" style={{color:"black", textDecoration:"none"}}> <MenuItem onClick={handleClose} disableRipple>
-          <InfoIcon />
-          Contact
-        </MenuItem></a>
+        <a href="#contact" style={{ color: "black", textDecoration: "none" }}>
+          {" "}
+          <MenuItem onClick={handleClose} disableRipple>
+            <InfoIcon />
+            Contact
+          </MenuItem>
+        </a>
       </StyledMenu>
     </div>
   );

@@ -1,0 +1,11 @@
+.dropdown {
+  border-radius: 30px !important;
+  color: white !important;
+  background-color: #e57322 !important;
+}
+.dropdown-hidden {
+  border-radius: 30px !important;
+  color: white !important;
+  background-color: #e57322 !important;
+  display: none;
+}

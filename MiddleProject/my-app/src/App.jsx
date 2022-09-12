@@ -8,11 +8,10 @@ import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
 import Footer from "./Components/Footer/Footer";
-import Reviews from "./Components/Reviews/Reviews";
 import About from "./Pages/About/About";
-
-
-
+import PageNotFound from "./Pages/PageNotFound/PageNotFound";
+import PhotoAlbum from "./Pages/Album/PhotoAlbum";
+import BackgroundAnimation from "./Components/BackgroundAnimation/BackgroundAnimation";
 
 function App() {
   return (
@@ -27,12 +26,11 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="event-date" element={<Calender />} />
-          <Route path="reviews" element={<Reviews />} />
-          
+          <Route path="photo-album" element={<BackgroundAnimation />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
       <Footer />
-
     </div>
   );
 }

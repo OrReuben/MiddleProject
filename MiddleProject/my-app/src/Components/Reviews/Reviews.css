@@ -1,60 +1,113 @@
-.comlete{
-    display: flex;
-    padding-bottom: 10%;
+.comlete {
+  display: flex;
+  padding-bottom: 10%;
 }
-.Home-reviews{
-    height:80vh;
-    padding-top:10px
+.Home-reviews {
+  height: 90vh;
+  padding-top: 10px;
 }
-.MuiButtonBase-root{
-    position: absolute;
-    padding-top: 80vh;
+.MuiButtonBase-root {
+  position: absolute;
+  padding-top: 80vh;
 }
-.css-r40f8v-MuiTypography-root {
-    margin: 0;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-    font-weight: 300 !important;
-    font-size: 0.75rem !important;
-    line-height: 1.43;
-    letter-spacing: 0.01071em;
-    color: rgba(0, 0, 0, 0.6);
+
+#root > div > div > div > span > div > div > div > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
 }
-#root > div > div > div > span > div > div > div > div:nth-child(1){
-    display: flex;
-    justify-content: center;
-}
-#root > div > div > div > span > div > div > div > div:nth-child(2){
-    display: flex;
-    justify-content: center;
+#root > div > div > div > span > div > div > div > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1200px) {
-    #root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-sm-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-4.one-off.css-cqpc6j-MuiGrid-root{
-        display: none;
-    }
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-sm-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-4.one-off.css-cqpc6j-MuiGrid-root {
+    display: none;
+  }
 }
-@media only screen and (max-width: 900px){
-    #root > div > div > div > span > div > div > div > div:nth-child(2) > div{
-        display: none;
-    }
-    #root > div > div > div > span > div > div > div > div:nth-child(1){
-        padding:0
-    }
+@media only screen and (max-width: 900px) {
+  #root > div > div > div > span > div > div > div > div:nth-child(2) > div {
+    display: none;
+  }
+  #root > div > div > div > span > div > div > div > div:nth-child(1) {
+    padding: 0;
+  }
 }
-@media only screen and (max-width: 500px){
-#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div{
-    width:90%
-}
-#root > div > div > div > span > div > div > button:nth-child(3){
-    margin:-15px
-}
-#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div > p{
-    font-size:0.55rem
-}
-#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div > div{
+@media only screen and (max-width: 500px) {
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root
+    > div
+    > div {
+    width: 90%;
+  }
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root
+    > div {
+    margin-right: -40px;
+  }
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root
+    > div
+    > div
+    > div
+    > p {
+    font-size: 0.55rem;
+  }
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root
+    > div
+    > div
+    > div
+    > div {
     font-size: 1rem;
-}
-#root > div > div > div > span > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root > div > div{
-    padding:4px
-}
+  }
+  #root
+    > div
+    > div
+    > div
+    > span
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-6.MuiGrid-grid-lg-4.css-1e6jbaj-MuiGrid-root
+    > div
+    > div {
+    padding: 4px;
+  }
 }
