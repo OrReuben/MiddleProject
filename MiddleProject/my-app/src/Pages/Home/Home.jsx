@@ -69,7 +69,7 @@ const Home = () => {
       their special day - in a private area, in the forest, in the
       field or in the private garden. In a few minutes, the bar
       opens in a chaotic style with various special objects from
-      time to time: an old radio, a gramophone, And special ..."
+      time to time: an old radio, a gramophone, And special"
           image={
             "https://www.havaveadam.co.il/wp-content/uploads/2018/08/%D7%93%D7%A3-%D7%91%D7%99%D7%AA-3-e1548941719436.jpg.webp"
           }
@@ -77,7 +77,7 @@ const Home = () => {
         <Button
           variant="contained"
           onClick={() => navigate("/about")}
-          sx={{ width: "30vw", padding: 2, color: "white" }}
+          sx={{ width: {xs:"30vw" ,sm:"30vw"}, padding: {xs:0.5 ,sm:2}, color: "white" }}
         >
           READ MORE
         </Button>
@@ -96,11 +96,11 @@ const Home = () => {
       <Button
         variant="contained"
         onClick={() => navigate("/photo-album")}
-        sx={{ width: "30vw", padding: 2, color: "white" }}
+        sx={{ width:{xs:"15vw" ,sm:"30vw"}, padding: {xs:0.5 ,sm:2}, color: "white"}}
       >
         MORE
       </Button>
-      <br /><br /><br /><br />
+      <br /><br /><br />
       <div id="contact">
         <LeaveDetails />
       </div>

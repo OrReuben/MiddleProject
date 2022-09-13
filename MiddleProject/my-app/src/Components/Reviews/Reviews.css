@@ -1,14 +1,25 @@
+.Home-reviews{
+  display: flex;
+  justify-content: center;
+}
+
 .comlete {
   display: flex;
-  padding-bottom: 10%;
+  justify-content: center;
+  padding-bottom: 3%;
+  padding-top:5px;
+  max-width: fit-content;
 }
+/* .comlete {
+  display: flex;
+  padding-bottom: 5%;
+}
+
 .Home-reviews {
-  height: 90vh;
   padding-top: 10px;
 }
 .MuiButtonBase-root {
   position: absolute;
-  padding-top: 80vh;
 }
 
 #root > div > div > div > span > div > div > div > div:nth-child(1) {
@@ -20,23 +31,8 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 1200px) {
-  #root
-    > div
-    > div
-    > div
-    > span
-    > div
-    > div
-    > div
-    > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-sm-12.MuiGrid-grid-md-12.MuiGrid-grid-lg-4.one-off.css-cqpc6j-MuiGrid-root {
-    display: none;
-  }
-}
+
 @media only screen and (max-width: 900px) {
-  #root > div > div > div > span > div > div > div > div:nth-child(2) > div {
-    display: none;
-  }
   #root > div > div > div > span > div > div > div > div:nth-child(1) {
     padding: 0;
   }
@@ -95,7 +91,7 @@
     > div
     > div
     > div {
-    font-size: 1rem;
+      font-size: 14px;
   }
   #root
     > div
@@ -110,4 +106,4 @@
     > div {
     padding: 4px;
   }
-}
+} */

@@ -126,11 +126,25 @@ function BtmReviews() {
           onClick={() => {
             navigetinReviews(1);
           }}
+          sx={{padding:{xs:0 ,sm:1},minWidth:{xs:0, sm:4},left:{xs:23,sm:0},top:{xs:127,sm:0},height: {xs:"70%", sm:"100%"}}}
         >
           <ArrowBackIosNewIcon></ArrowBackIosNewIcon>
         </Button>
-        <Grid container columnSpacing={{ xs: 3, md: 3 }}>
-          <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid
+          container
+          columnSpacing={{ xs: 0, md: 3 }}
+          sx={{ display: "flex" }}
+        >
+          <Grid
+            item
+            sm={12}
+            md={6}
+            lg={4}
+            sx={{
+              display: { xs: "none", sm: "none", md: "none", lg: "flex" },
+              justifyContent: "center",
+            }}
+          >
             <Reviews
               name={reviewsStr[counter - 1].name}
               discripion={reviewsStr[counter - 1].discripion}
@@ -141,7 +155,16 @@ function BtmReviews() {
               reviewsStrb={reviewsStr.length - 1}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid
+            item
+            sm={12}
+            md={6}
+            lg={4}
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             <Reviews
               name={reviewsStr[counter].name}
               className="two-off"
@@ -156,11 +179,10 @@ function BtmReviews() {
           <Grid
             item
             sm={12}
-            md={12}
+            md={6}
             lg={4}
-            display="flex"
-            justifyContent={"center"}
             className="one-off"
+            sx={{ display: { xs: "flex",sm: "flex" }, justifyContent: "center" }}
           >
             <Reviews
               name={reviewsStr[counter + 1].name}
@@ -177,6 +199,7 @@ function BtmReviews() {
           onClick={() => {
             navigetinReviews(2);
           }}
+          sx={{padding:{xs:0 ,sm:1},minWidth:{xs:0, sm:4},right:{xs:27,sm:0},top:{xs:127,sm:0},height: {xs:"70%", sm:"100%"}}}
         >
           <ArrowForwardIosIcon></ArrowForwardIosIcon>
         </Button>

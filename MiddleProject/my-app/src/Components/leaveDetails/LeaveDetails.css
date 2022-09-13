@@ -10,18 +10,7 @@
   justify-content: center;
   height: 80vh;
 }
-.css-1lhue4c-MuiPaper-root-MuiGrid-root {
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0),
-    0px 0px 0px 0px rgba(0, 0, 0, 0) !important;
-}
-#contact > div > div > main > div > div.buttomC > div:nth-child(2) > h1 {
-  padding-top: 9%;
-  font-weight: 600;
-}
 
-.cf7-main-title {
-  margin-bottom: 26px;
-}
 .text {
   color: #0a0018;
 }
@@ -94,10 +83,7 @@
   padding-top: 20px;
   margin-top: 50px;
 }
-@media only screen and (max-width: 730px) {
-  #contact > div > div > main > div > div.buttomC > div:nth-child(2) > h1 {
-    display: none;
-  }
+@media only screen and (max-width: 900px) {
   .contact-button {
     width: 100%;
     display: flex;
@@ -107,9 +93,4 @@
     display: flex;
     justify-content: center;
   }
-}
-@media only screen and (max-width: 400px){
-  #contact-header{
-  font-size: 1rem;
-}
 }

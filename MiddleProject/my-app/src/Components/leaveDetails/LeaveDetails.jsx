@@ -19,13 +19,14 @@ export default function SignInSide() {
     >
         <Grid container component="main" sx={{ height: "40vh", width: "60vw" }}>
           <div className="allC">
-            <div
+            <Box
+              sx={{fontSize:{xs:14, sm:"1.25rem"}}}
               id="contact-header"
               className="fit gilroy ltr font-22 bolder line-2h5 space-55 auto text pos-rel l-1 cf7-main-title"
             >
               NOW, LET'S TALK!
               <div className="underline cyan-bg ul-m pos-abs behind"></div>
-            </div>
+            </Box>
 
             <div className="buttomC">
               <CssBaseline />
@@ -136,7 +137,9 @@ export default function SignInSide() {
                   sx={{
                     color: "white",
                     bgcolor: "#cfdef300",
-                    fontweight: "700",
+                    fontWeight: "600",
+                    paddingTop:5,
+                    display:{xs:"none", md:"flex"}
                   }}
                 >
                   Leave <br></br> Your <br /> Details

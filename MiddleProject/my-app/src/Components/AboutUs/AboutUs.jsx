@@ -32,6 +32,7 @@ export default function AboutUs(props) {
                   align="center"
                   color="text.secondary"
                   paragraph
+                  sx={{fontSize:{xs:35,sm:60}}}
                   
                 >
                   {props.title}
@@ -41,6 +42,7 @@ export default function AboutUs(props) {
                   align="center"
                   color="text.secondary"
                   paragraph
+                  sx={{fontSize:{xs:20,sm:25}}}
                 >
                   {props.par}
                 </Typography>
@@ -55,6 +57,7 @@ export default function AboutUs(props) {
               component="img"
               height="400"
               image={props.image}
+              
             />
           </div>
         </Grid>

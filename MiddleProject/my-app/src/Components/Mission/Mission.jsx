@@ -42,10 +42,10 @@ export default function Mission() {
           </div>
 
           <Typography
-            variant="h5"
             align="center"
             color="text.secondary"
             paragraph
+            sx={{fontSize:{xs:15,sm:20}}} 
           >
             We fulfill dreams and execute weddings in nature in a special way.
             With lots of thought and love for our work, we create weddings
@@ -59,7 +59,7 @@ export default function Mission() {
             spacing={2}
             justifyContent="center"
           >
-            <Button variant="contained" onClick={() => navigate('/pricing')} sx={{width:"30vw",padding:2, color:"white"}}> 
+            <Button variant="contained" onClick={() => navigate('/pricing')} sx={{width:"30vw",padding:{xs:0.5,sm:2}, color:"white"}}> 
               Lets start
             </Button>
           </Stack>
