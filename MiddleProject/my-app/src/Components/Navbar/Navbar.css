@@ -8,18 +8,12 @@
 #root > div > header > div > div > div.MuiBox-root.css-16pm72g {
   justify-content: left;
 }
-#menu-appbar
-  > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper
-  > ul
-  > div {
-  flex-direction: column;
-  padding: 15px;
-}
 .header {
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0) !important;
 }
 .headerbg {
+  transition: 0.3s ease-in-out;
   background-color: #e57373;
 }

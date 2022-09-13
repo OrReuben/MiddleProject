@@ -50,7 +50,6 @@ const Navbar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-    navigate("/about");
   };
   const handleCloseNavMenu1 = () => {
     setAnchorElNav(null);
@@ -59,6 +58,10 @@ const Navbar = () => {
   const handleCloseNavMenu2 = () => {
     setAnchorElNav(null);
     navigate("/photo-album");
+  };
+  const handleCloseNavMenu3 = () => {
+    setAnchorElNav(null);
+    navigate("/about");
   };
 
   const handleCloseUserMenu = () => {
@@ -126,9 +129,16 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <Box
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: "flex", md: "none" },
+                  flexDirection: "column",
+                  padding: "15px",
+                }}
+              >
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={handleCloseNavMenu3}
                   variant="string"
                   disableElevation
                   sx={{ my: 2, color: "red", display: "block" }}
@@ -151,15 +161,16 @@ const Navbar = () => {
                 >
                   <Typography>Album</Typography>
                 </Button>
-                {location.pathname === "/" && <Dropdown />}
               </Box>
             </Menu>
+                {location.pathname === "/" && <Dropdown />}
           </Box>{" "}
           <Box
             component="img"
             sx={{
-              width: "75px",
-              height: "75px",
+              width: {xs:"60px",sm:"75px"},
+              height: {xs:"65px",sm:"65px"},
+              padding:"3px 0px",
               display: { xs: "block", md: "none" },
               cursor: "pointer",
             }}
@@ -185,7 +196,7 @@ const Navbar = () => {
           ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={handleCloseNavMenu3}
               variant="string"
               disableElevation
               sx={{

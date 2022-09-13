@@ -67,19 +67,23 @@ export default function Dropdown() {
   return (
     <div style={{ alignSelf: "center" }}>
       <Button
-        style={{
+        sx={{
           borderRadius: "30px",
           color: "white",
           backgroundColor: "#e57373",
+          fontSize:{xs:10,sm:13},
+          width:{xs:80,sm:100},
+          padding:{xs:"4px 0px 4px 0px",sm:"5px"},
+          margin:0
         }}
         id="demo-customized-button"
         aria-controls={open ? "demo-customized-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        variant="string"
+        variant="contained"
         disableElevation
         onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon />}
+        endIcon={<KeyboardArrowDownIcon  />}
       >
         Explore
       </Button>
@@ -93,21 +97,18 @@ export default function Dropdown() {
         onClose={handleClose}
       >
         <a href="#Home" style={{ color: "black", textDecoration: "none" }}>
-          {" "}
           <MenuItem onClick={handleClose} disableRipple>
             <HomeIcon />
             Welcome
           </MenuItem>
         </a>
         <a href="#mission" style={{ color: "black", textDecoration: "none" }}>
-          {" "}
           <MenuItem onClick={handleClose} disableRipple>
             <TaskIcon />
             Our Mission
           </MenuItem>
         </a>
         <a href="#product" style={{ color: "black", textDecoration: "none" }}>
-          {" "}
           <MenuItem onClick={handleClose} disableRipple>
             <CollectionsBookmarkIcon />
             About
@@ -115,7 +116,6 @@ export default function Dropdown() {
         </a>
         <Divider />
         <a href="#contact" style={{ color: "black", textDecoration: "none" }}>
-          {" "}
           <MenuItem onClick={handleClose} disableRipple>
             <InfoIcon />
             Contact

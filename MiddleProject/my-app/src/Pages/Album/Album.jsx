@@ -31,6 +31,7 @@ export default function Album(props) {
             align="center"
             color="text.primary"
             gutterBottom
+            sx={{fontSize:{xs:30,sm:50}}}
           >
             Our Photo Album
           </Typography>
@@ -39,6 +40,7 @@ export default function Album(props) {
             align="center"
             color="text.secondary"
             paragraph
+            sx={{fontSize:{xs:15,sm:22}}}
           >
             Our extensive experience in producing events has led us to discover
             a wide variety of special ocations. When we meet, we will offer you

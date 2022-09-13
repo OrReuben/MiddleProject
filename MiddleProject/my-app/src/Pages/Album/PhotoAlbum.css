@@ -5,6 +5,7 @@
   transition: 0.4s;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 .css-1l4w6pd:hover {
   opacity: 1;

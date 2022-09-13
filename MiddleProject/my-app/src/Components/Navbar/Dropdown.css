@@ -9,3 +9,9 @@
   background-color: #e57322 !important;
   display: none;
 }
+
+@media only screen and (max-width: 600px){
+.css-9tj150-MuiButton-endIcon{
+  margin-left:0 !important
+}
+}

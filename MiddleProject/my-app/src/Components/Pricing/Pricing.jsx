@@ -92,6 +92,7 @@ export default function Pricing() {
           align="center"
           color="text.primary"
           gutterBottom
+          sx={{fontSize:{xs:35,sm:50}}}
         >
           Pricing
         </Typography>
@@ -100,6 +101,7 @@ export default function Pricing() {
           align="center"
           color="text.secondary"
           component="p"
+          sx={{fontSize:{xs:15,sm:22}}}
         >
           We will be happy to have a look at the yard and the house and to plan
           the production in the best and most thorough manner possible, so that
