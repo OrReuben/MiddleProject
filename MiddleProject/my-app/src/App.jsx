@@ -10,7 +10,6 @@ import Calender from "./Pages/Calender/Calender";
 import Footer from "./Components/Footer/Footer";
 import About from "./Pages/About/About";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
-import PhotoAlbum from "./Pages/Album/PhotoAlbum";
 import BackgroundAnimation from "./Components/BackgroundAnimation/BackgroundAnimation";
 
 function App() {

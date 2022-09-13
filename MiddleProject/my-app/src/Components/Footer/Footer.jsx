@@ -4,20 +4,22 @@ import Box from "@material-ui/core/Box";
 import Link from "@material-ui/core/Link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PhoneIcon from '@mui/icons-material/Phone';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import PhoneIcon from "@mui/icons-material/Phone";
 import { Typography } from "@material-ui/core";
-import './Footer.css'
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <Box
         px={{ xs: 3, sm: 10, md: 10, lg: 10 }}
         py={{ xs: 3, sm: 3, md: 3, lg: 3 }}
         bgcolor="#e57373"
         color="white"
+        borderTop={1}
+        sx={{ borderColor: "white" }}
       >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
@@ -73,26 +75,59 @@ export default function Footer() {
           </Grid>
         </Container>
         <Box textAlign="center" pt={{ xs: 2, sm: 2, md: 2, lg: 2 }}>
-         <Link href="https://Instagram.com" color="inherit" style={{ textDecoration: 'none'}}> <span style={{ marginRight: 5}}>
+          <Link
+            href="https://Instagram.com"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
             {" "}
-            <InstagramIcon />{" "}
-          </span> </Link>
-         <Link href="https://Twitter.com" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
+            <span style={{ marginRight: 5 }}>
+              {" "}
+              <InstagramIcon />{" "}
+            </span>{" "}
+          </Link>
+          <Link
+            href="https://Twitter.com"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
             {" "}
-            <TwitterIcon />{" "}
-          </span> </Link>
-         
-         <Link href="https://Whatsapp.com" color="inherit" style={{ textDecoration: 'none' }}> <span style={{ marginRight: 5 }}>
+            <span style={{ marginRight: 5 }}>
+              {" "}
+              <TwitterIcon />{" "}
+            </span>{" "}
+          </Link>
+
+          <Link
+            href="https://Whatsapp.com"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
             {" "}
-            <WhatsAppIcon />{" "}
-          </span></Link>
-        <Link href="https://Facebook.com" color="inherit" style={{ textDecoration: 'none' }}>  <span style={{ marginRight: 5 }}>
+            <span style={{ marginRight: 5 }}>
+              {" "}
+              <WhatsAppIcon />{" "}
+            </span>
+          </Link>
+          <Link
+            href="https://Facebook.com"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
             {" "}
-            <FacebookIcon />{" "}
-          </span></Link>
+            <span style={{ marginRight: 5 }}>
+              {" "}
+              <FacebookIcon />{" "}
+            </span>
+          </Link>
         </Box>
-        <Box textAlign="center" pt={{ xs: 3, sm: 3, md: 3, lg: 3 }} >
-        <Typography><span className="phone-icon"><PhoneIcon /> </span> 050-839-2929 </Typography> 
+        <Box textAlign="center" pt={{ xs: 3, sm: 3, md: 3, lg: 3 }}>
+          <Typography>
+            <span className="phone-icon">
+              <PhoneIcon />{" "}
+            </span>{" "}
+            050-839-2929{" "}
+          </Typography>
         </Box>
         <Box textAlign="center" pt={{ xs: 3, sm: 3, md: 3, lg: 3 }}>
           Hava Ve Adam &reg; {new Date().getFullYear()}

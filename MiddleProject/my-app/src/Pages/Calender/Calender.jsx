@@ -4,6 +4,7 @@ import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import React, { useState } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import { Typography } from "@mui/material";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 // import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -22,9 +23,7 @@ const localizer = dateFnsLocalizer({
 
 export default function Calender() {
   const date = useSelector((state) => state.input.cardObj);
-  console.log(date);
   const newDate = date[date.length - 1].date.split("-");
-  console.log(newDate);
   const year = newDate[0];
   let month = newDate[1];
   if (month < 10) {
@@ -37,7 +36,7 @@ export default function Calender() {
 
   // const [Event, setEvent] = useState({ title: "", start: "", end: "" });
   // const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
-  const [allEvents, setAllEvents] = useState([
+  const [allEvents] = useState([
     {
       title: "event",
       allDay: true,
@@ -73,7 +72,7 @@ export default function Calender() {
   //   setAllEvents([...allEvents, newEvent]);
   // }
   return (
-    <div>
+    <div >
       {/* <h1>Calendar</h1>
             <h2>Add New Event</h2>
             <div>
@@ -85,12 +84,15 @@ export default function Calender() {
                 </button>
             </div> */}
       <div className="calender">
-        <Calendar
+        <Typography variant="h5" sx={{
+              display: { sm: "flex", justifyContent: "center", md: "none" },
+            }}>September 2022</Typography>
+        <Calendar className="calender-container"
           localizer={localizer}
           events={allEvents}
           startAccessor="start"
           endAccessor="end"
-          style={{ height: 500, margin: "50px" }}
+          style={{ height: 500, margin: "20px" }}
         />
       </div>
     </div>

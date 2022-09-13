@@ -5,3 +5,7 @@
 .phone-icon{
     padding-right:10px
 }
+.footer{
+    position: relative;
+    z-index: 3;
+}

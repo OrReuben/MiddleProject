@@ -7,19 +7,19 @@ export default function InfintyText() {
         <div className="marquee-wrapper">
           <div className="marquee-title">
             / We think <span className="text-stroke-black"> creative </span>
-            &amp; make them 
-            <span className="text-stroke-black"> easy</span> / We think
+            &amp; make dreams come
+            <span className="text-stroke-black"> true</span> / We think
             <span className="text-stroke-black"> creative </span>
-            &amp; make them
-            <span className="text-stroke-black"> easy</span>
+            &amp; make dreams come
+            <span className="text-stroke-black"> true</span>
           </div>
           <div className="marquee-title">
             / We think <span className="text-stroke-black"> creative </span>
-            &amp; make them 
-            <span className="text-stroke-black"> easy</span> / We think
+            &amp; make dreams come 
+            <span className="text-stroke-black"> true</span> / We think
             <span className="text-stroke-black"> creative </span>
-            &amp; make them 
-            <span className="text-stroke-black"> easy</span>
+            &amp; make dreams come 
+            <span className="text-stroke-black"> true</span>
           </div>
         </div>
       </h3>

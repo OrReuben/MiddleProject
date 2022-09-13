@@ -3,6 +3,7 @@ import "./BackgroundAnimation.css";
 
 export default function BackgroundAnimation() {
   return (
+    <div>
     <div className="area">
       <ul className="circles">
         <li></li>
@@ -15,8 +16,9 @@ export default function BackgroundAnimation() {
         <li></li>
         <li></li>
         <li></li>
-        <PhotoAlbum />
       </ul>
+        <PhotoAlbum />
+    </div>
     </div>
   );
 }

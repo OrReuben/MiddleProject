@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -14,10 +13,9 @@ import "./LeaveDetails.css";
 
 export default function SignInSide() {
   return (
+    <Box >
     <Box
       className="LeaveDetailsSection"
-      borderBottom={1}
-      sx={{ borderColor: "white" }}
     >
         <Grid container component="main" sx={{ height: "40vh", width: "60vw" }}>
           <div className="allC">
@@ -35,10 +33,7 @@ export default function SignInSide() {
                 item
                 xs={12}
                 sm={8}
-                md={5}
-                component={Paper}
-                elevation={6}
-                square
+                md={4}
                 sx={{ color: "white", bgcolor: "#cfdef300" }}
               >
                 <Box
@@ -113,8 +108,7 @@ export default function SignInSide() {
                     <div className="contact-button">
                     <Button
                       type="submit"
-                      color="error"
-                      variant="contained"
+                      variant="string"
                       sx={{
                         mt: 3,
                         mb: 2,
@@ -152,6 +146,7 @@ export default function SignInSide() {
             </div>
           </div>
         </Grid>
+    </Box>
     </Box>
   );
 }

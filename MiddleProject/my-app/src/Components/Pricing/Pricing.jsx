@@ -107,12 +107,12 @@ export default function Pricing() {
         </Typography>
       </Container>
       <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
+        <Grid container spacing={2} alignItems="flex-end">
           {tiers.map((tier, index) => (
             <Grid
               item
               xs={12}
-              sm={tier.title === "Enterprise" ? 12 : 6}
+              sm={tier.title === "Wedding at sea" ? 12 : 12}
               md={4}
               key={index}
             >
@@ -121,7 +121,7 @@ export default function Pricing() {
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: "center" }}
-                  action={tier.title === "Pro" ? <StarIcon /> : null}
+                  action={tier.title === "Wedding at sea" ? <StarIcon /> : null}
                   subheaderTypographyProps={{
                     align: "center",
                   }}

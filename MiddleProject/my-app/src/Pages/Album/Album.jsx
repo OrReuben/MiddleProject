@@ -58,7 +58,7 @@ export default function Album(props) {
                     src={props.image[index]}
                     alt={index}
                     style={{
-                      width: 350,
+                      width: 250,
                       height: 225,
                       display: "flex",
                       alignSelf: "center",

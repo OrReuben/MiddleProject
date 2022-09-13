@@ -1,14 +1,14 @@
 .css-1l4w6pd {
   padding: 15px;
   background-image: linear-gradient(to right, white, #f8f8f8);
-  background-size: 300%;
   opacity: 0.7;
   transition: 0.4s;
+  position: relative;
+  z-index: 1;
 }
 .css-1l4w6pd:hover {
   opacity: 1;
-  border: 2px solid black;
-  background-size: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.546);
 }
 
 @media only screen and (max-width: 600px) {

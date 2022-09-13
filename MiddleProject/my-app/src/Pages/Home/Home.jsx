@@ -100,6 +100,7 @@ const Home = () => {
       >
         MORE
       </Button>
+      <br /><br /><br /><br />
       <div id="contact">
         <LeaveDetails />
       </div>
