@@ -24,17 +24,20 @@ const Home = () => {
             <Typography
               variant="h2"
               letterSpacing={1}
-              fontWeight={600}
+              fontWeight={700}
               gutterBottom
               className="main-header"
+              sx={{position:"relative", zIndex:2}}
             >
               WELCOME
             </Typography>
             <Typography
               variant="h5"
-              fontWeight={600}
+              fontWeight={700}
               letterSpacing={2}
               className="par-header"
+              sx={{position:"relative", zIndex:2}}
+
             >
               Let's bring your dream to reality!
             </Typography>
@@ -47,6 +50,10 @@ const Home = () => {
             style={{
               display: "flex",
               flexDirection: "column",
+              position:"absolute",
+              zIndex:2,
+              fontWeight:700,
+              letterSpacing:1.2
             }}
           >
             Scroll down <br />

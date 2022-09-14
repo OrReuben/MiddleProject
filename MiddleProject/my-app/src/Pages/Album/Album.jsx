@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import './PhotoAlbum.css'
 
 const cards = [];
 
@@ -59,13 +60,7 @@ export default function Album(props) {
                   <img
                     src={props.image[index]}
                     alt={index}
-                    style={{
-                      width: 250,
-                      height: 225,
-                      display: "flex",
-                      alignSelf: "center",
-                      justifySelf: "center",
-                    }}
+                    className="album-image"
                   />
                 </Box>
               </Card>

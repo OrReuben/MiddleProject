@@ -29,11 +29,9 @@ const useStyle = makeStyles((theme) => ({
   },
   background: {
     backgroundImage: "linear-gradient(to right, #EF9A9A, #EEEEE2, #EF9A9A)",
-    height: "100vh",
+    height: "130vh",
     display: "flex",
     alignItems: "center",
-    position:"relative",
-    zIndex:5
   },
 }));
 

@@ -14,7 +14,6 @@ import Typography from "@mui/material/Typography";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
 
 function Copyright(props) {
   return (
@@ -77,9 +76,9 @@ export default function Pricing() {
     <div
       style={{
         backgroundImage: "linear-gradient(to right, #FFEFBA, #F9F9F9, #FFEFBA)",
+        paddingTop:"5%"
       }}
     >
-      <Navbar />
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
       />

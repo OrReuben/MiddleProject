@@ -15,15 +15,15 @@ export default function AboutUs(props) {
   }, []);
   return (
     <div className="about">
-      <CssBaseline />
+            <CssBaseline />
       <Grid container>
-        <Grid  item xs={12} md={6}>
+        <Grid  item xs={12} md={6} >
           <div data-aos="fade-right">
             <Box
               sx={{
                 bgcolor: "background.paper",
                 pt: 8,
-                pb: 6,
+                pb: 0,
               }}
             >
               <Container maxWidth="sm">
@@ -32,7 +32,7 @@ export default function AboutUs(props) {
                   align="center"
                   color="text.secondary"
                   paragraph
-                  sx={{fontSize:{xs:35,sm:60}}}
+                  sx={{fontSize:{xs:30, sm:35, md:45, lg:50 }}} 
                   
                 >
                   {props.title}
@@ -42,7 +42,7 @@ export default function AboutUs(props) {
                   align="center"
                   color="text.secondary"
                   paragraph
-                  sx={{fontSize:{xs:20,sm:25}}}
+                  sx={{fontSize:{xs:15, sm:20, md:22 }}} 
                 >
                   {props.par}
                 </Typography>
@@ -50,7 +50,7 @@ export default function AboutUs(props) {
             </Box>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} md={6} sx={{display:"flex", justifyContent:"center",padding:"7.5% 10px 20px 10px"}}>
           <div data-aos="zoom-in-up">
             <CardMedia
               className="imgMedia"

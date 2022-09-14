@@ -8,9 +8,9 @@ import { CssBaseline } from "@mui/material";
 import Navbar from "./Components/Navbar/Navbar";
 import Calender from "./Pages/Calender/Calender";
 import Footer from "./Components/Footer/Footer";
-import About from "./Pages/About/About";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
-import BackgroundAnimation from "./Components/BackgroundAnimation/BackgroundAnimation";
+import BackgroundAnimationAboutUs from "./Components/BackgroundAnimation/BackgroundAnimationAboutUs";
+import BackgroundAnimationPhotoAlbum from "./Components/BackgroundAnimation/BackgroundAnimationPhotoAlbum";
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="payment" element={<Payment />} />
           <Route path="register" element={<Register />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<BackgroundAnimationAboutUs />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="event-date" element={<Calender />} />
-          <Route path="photo-album" element={<BackgroundAnimation />} />
+          <Route path="photo-album" element={<BackgroundAnimationPhotoAlbum />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

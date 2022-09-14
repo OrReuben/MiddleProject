@@ -1,7 +1,7 @@
 import PhotoAlbum from "../../Pages/Album/PhotoAlbum";
 import "./BackgroundAnimation.css";
 
-export default function BackgroundAnimation() {
+export default function BackgroundAnimationPhotoAlbum() {
   return (
     <div>
     <div className="area">

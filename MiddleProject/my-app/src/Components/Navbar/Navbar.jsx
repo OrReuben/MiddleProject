@@ -80,7 +80,7 @@ const Navbar = () => {
           : ""
       }
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="1920px">
         <Toolbar disableGutters>
           {" "}
           <Box
@@ -271,16 +271,15 @@ const Navbar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting, index) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={() =>
+                  index === 0
+                    ? navigate("/register")
+                    : index === 1
+                    ? navigate("/")
+                    : navigate("/event-date")
+                }>
                   <Typography
                     textAlign="center"
-                    onClick={() =>
-                      index === 0
-                        ? navigate("/register")
-                        : index === 1
-                        ? navigate("/")
-                        : navigate("/event-date")
-                    }
                   >
                     {setting}
                   </Typography>

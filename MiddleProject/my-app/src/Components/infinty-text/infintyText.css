@@ -30,8 +30,11 @@
     width: max-content;
 
     padding-left: 100%;
-    /* show the marquee just outside the paragraph */
     will-change: transform;
+    animation: marquee 30s linear infinite;
+  }
+  .catch{
+    animation-delay: 30s;
     animation: marquee 30s linear infinite;
   }
   

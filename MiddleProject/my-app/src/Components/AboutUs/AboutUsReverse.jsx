@@ -17,7 +17,7 @@ export default function AboutUsReverse() {
     <div className="about">
       <CssBaseline />
       <Grid container>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} md={6} sx={{display:"flex", justifyContent:"center",padding:"7.5% 5px 20px 5px"}}>
           <div data-aos="zoom-in-up">
             <CardMedia
               className="imgMedia"
@@ -32,8 +32,8 @@ export default function AboutUsReverse() {
             <Box
               sx={{
                 bgcolor: "background.paper",
-                pt: 8,
-                pb: 6,
+                pt: 2,
+                pb: 2,
               }}
             >
               <Container maxWidth="sm">
@@ -42,6 +42,7 @@ export default function AboutUsReverse() {
                   align="center"
                   color="text.secondary"
                   paragraph
+                 sx={{fontSize:{xs:30, sm:35, md:45, lg:50 }}} 
                 >
                   Wedding at sea
                 </Typography>
@@ -50,6 +51,7 @@ export default function AboutUsReverse() {
                   align="center"
                   color="text.secondary"
                   paragraph
+                  sx={{fontSize:{xs:15, sm:20, md:25 }}}
                 >
                   A wedding in the family backyard is an event of an intimate
                   nature closely tied in with home and family. If you have a big

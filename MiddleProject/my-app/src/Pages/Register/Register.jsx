@@ -29,11 +29,9 @@ const useStyle = makeStyles(() => ({
   },
   background: {
     backgroundImage: "linear-gradient(to right, #EF9A9A, #EEEEE2, #EF9A9A)",
-    height: "100vh",
+    height: "120vh",
     display: "flex",
     alignItems: "center",
-    position:"relative",
-    zIndex:5
   },
 }));
 
@@ -188,7 +186,7 @@ const Register = () => {
                               component={TextField}
                             />
                           </Grid>
-                          <Grid item xs={9} sm={6} md={6}>
+                          <Grid item xs={9} sm={12} md={6}>
                             <Field
                               label="Confirm Password"
                               variant="outlined"

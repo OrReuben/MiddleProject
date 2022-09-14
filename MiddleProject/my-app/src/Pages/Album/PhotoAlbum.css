@@ -9,11 +9,21 @@
 }
 .css-1l4w6pd:hover {
   opacity: 1;
-  border: 1px solid rgba(0, 0, 0, 0.546);
+  transform: scale(1.05);
+}
+.album-image {
+  width: 250px;
+  height: 225px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 @media only screen and (max-width: 600px) {
   .css-1l4w6pd {
     opacity: 1;
+  }
+  .album-image {
+width: 400px;
   }
 }
