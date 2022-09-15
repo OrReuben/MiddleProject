@@ -1,7 +1,6 @@
 .Home {
   width: 100vw;
   height: 100vh;
-  background-color: #e57373;
 }
 
 video {
@@ -10,7 +9,7 @@ video {
   opacity: 0.95;
   object-fit: cover;
   background-repeat: no-repeat;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 ::-webkit-scrollbar {
   display: none;

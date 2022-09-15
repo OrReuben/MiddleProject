@@ -5,7 +5,7 @@ export default function BackgroundAnimationAboutUs() {
   return (
     <div>
     <div className="area" >
-      <ul className="circles" style={{zIndex: 1, opacity:30}}>
+      <ul className="circles" style={{zIndex: 0, opacity:30}}>
         <li></li>
         <li></li>
         <li></li>

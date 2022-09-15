@@ -21,7 +21,6 @@ export default function AboutUs(props) {
           <div data-aos="fade-right">
             <Box
               sx={{
-                bgcolor: "background.paper",
                 pt: 8,
                 pb: 0,
               }}
@@ -50,7 +49,7 @@ export default function AboutUs(props) {
             </Box>
           </div>
         </Grid>
-        <Grid item xs={12} md={6} sx={{display:"flex", justifyContent:"center",padding:"7.5% 10px 20px 10px"}}>
+        <Grid item xs={12} md={6} sx={{display:"flex", justifyContent:"center",padding:"7.5% 10px 20px 10px",opacity:"90%"}}>
           <div data-aos="zoom-in-up">
             <CardMedia
               className="imgMedia"
