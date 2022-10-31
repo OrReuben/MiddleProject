@@ -1,6 +1,6 @@
-# MiddleProject
+# MiddleProject - Client side project
 
-The site was created to provide a service to a company that organizes events in nature, you can see examples and opinions, order an event and moreץ
+The site was created to provide a service to a company that organizes events in nature, you can see examples and opinions, order an event and more
 
 ## Table Of Contents <a name="Table"></a>
 - [Table Of Contents](#Table)
@@ -70,12 +70,10 @@ Calendar
    
 ## What next <a name="next"></a>
 
--Connect the client side with the server.
+-Creating a server and connecting to the client
 
 -Creating an administrator and client login
 
 -Connecting the calendar with Google calendar.
 
 -Creating a guest list and sending a reminder before the event.
-
--Creating a clearing system.
