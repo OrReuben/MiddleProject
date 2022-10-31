@@ -67,12 +67,10 @@ Calendar
    
    -MUI
    
-   Server:
-   
-   -Node.js
-   
-   -express
-   
-   -mongoDB
    
 ## What next <a name="next"></a>
+Connect the client side with the server.
+Creating an administrator and client login
+Connecting the calendar with Google calendar.
+Creating a guest list and sending a reminder before the event.
+Creating a clearing system.
