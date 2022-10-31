@@ -1,6 +1,6 @@
 # MiddleProject - Client side project
 
-The site was created to provide a service to a company that organizes events in nature, you can see examples and opinions, order an event and more
+During the bootcamp course after learning the client side I collaborated in the project to provide a service to a company that organizes events in nature, you can see examples and opinions, order an event.
 
 ## Table Of Contents <a name="Table"></a>
 - [Table Of Contents](#Table)
